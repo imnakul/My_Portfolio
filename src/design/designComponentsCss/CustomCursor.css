@@ -1,0 +1,37 @@
+/* Hide the default cursor */
+body {
+   cursor: default;
+}
+
+/* Outer circle */
+.custom-cursor {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 20px; /* Outer circle size */
+   height: 20px;
+   border: 2px solid cyan; /* Outer circle in cyan */
+   border-radius: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 1000;
+   transition: transform 0.12s ease; /* Smooth lagging */
+   box-shadow: 0 0 8px rgba(0, 255, 255, 0.6); /* Subtle glow for the outer circle */
+   pointer-events: none;
+}
+
+/* Inner dot */
+.custom-cursor::after {
+   content: '';
+   position: fixed;
+   top: calc(50% + var(--dot-offset-y, 0px)); /* Move vertically */
+   left: calc(50% + var(--dot-offset-x, 0px)); /* Move horizontally */
+   width: 6px; /* Small dot size */
+   height: 6px;
+   background-color: cyan; /* Inner dot in cyan */
+   border-radius: 50%;
+   transform: translate(-50%, -50%);
+   transition: transform 0.1s ease-in; /* Smooth motion */
+   box-shadow: 0 0 6px rgba(0, 255, 255, 0.8); /* Subtle glow for the inner dot */
+}

@@ -1,0 +1,55 @@
+body {
+   margin: 0;
+   /* background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f172a, #1d2c4d); original gradient*/
+   /* background: linear-gradient(178.1deg, rgb(60, 55, 106) 8.5%, rgb(23, 20, 69) 82.4%); static purple-blue color good for cyan cursor*/
+   /* background: linear-gradient(45deg, #1d2c4d, #0f172a, #24243e, #302b63, #0f0c29); reverse gradient*/
+
+   /* best ones till now, but keeping above if after content may need to change */
+   background: linear-gradient(
+      -270deg,
+      #0f0c29 20%,
+      #302b63 40%,
+      #24243e 60%,
+      #0f172a 80%,
+      #1d2c4d
+   );
+   /* background: radial-gradient(circle, #0f0c29, #302b63, #24243e, #0f172a, #1d2c4d);  */
+
+   background-size: 400% 400%;
+   animation: gradient 15s ease infinite;
+   height: 100vh;
+}
+
+@keyframes gradient {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
+}
+
+h1,
+h5 {
+   /* Neon cyan glow */
+   text-shadow: 0px 2px 15px rgba(0, 255, 255, 0.6);
+}
+
+.btn-group .btn {
+   box-shadow: 0px 2px 5px rgba(0, 255, 255, 0.3);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-group .btn:hover {
+   transform: translateY(-3px);
+   box-shadow: 0px 5px 15px rgba(0, 255, 255, 0.5); /* Stronger neon glow on hover */
+}
+
+.text-white {
+   /* Soft teal-cyan text for readability */
+   /* color: #a3f7ff !important;  */
+   color: #05eb1c !important;
+}
