@@ -1,15 +1,27 @@
 .text-white {
-  /* Soft teal-cyan text for readability */
-  /* color: #a3f7ff !important;  */
-  color: #05eb1c !important;
+   /* Soft teal-cyan text for readability */
+   /* color: #a3f7ff !important;  */
+   color: #05eb1c !important;
 }
 
-h1, h5 {
-  /* Neon cyan glow */
-  text-shadow: 0px 2px 15px rgba(145, 247, 115, 0.6);
-
+h1,
+h5 {
+   /* Neon cyan glow */
+   text-shadow: 0px 2px 15px rgba(145, 247, 115, 0.6);
 }
 
-html {
-  scroll-behavior: smooth;
+.text-pink {
+   color: palevioletred !important;
+}
+
+/* p {
+   text-shadow: 0px 2px 15px rgba(250, 10, 202, 0.6);
+} */
+
+a {
+   text-shadow: 0px 2px 15px rgba(250, 134, 10, 0.6);
+}
+
+.clip-path-circle {
+   clip-path: circle(90% at center);
 }
