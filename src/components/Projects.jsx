@@ -5,7 +5,8 @@ import { useState } from 'react'
 const Projects = ({ imageSrc, title, description, link }) => {
    return (
       <>
-         <div className='max-w-xl h-[420px] mx-auto bg-trasparent rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-110 hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.6)] border border-green-400'>
+         {/* Card for showing projects*/}
+         <div className='max-w-xl h-[420px] mx-auto mb-20 bg-trasparent rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-110 hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.6)] border border-green-400'>
             {/* hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] */}
             {/* hover:shadow-[0_0_30px_10px_rgba(0,255,0,0.6)] */}
             <img
