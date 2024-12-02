@@ -9,6 +9,7 @@ function Contact() {
    const [formData, setFormData] = useState({
       name: '',
       email: '',
+      title: '',
       message: '',
    })
 
@@ -19,16 +20,27 @@ function Contact() {
 
    const handleSubmit = (e) => {
       e.preventDefault()
-      alert('Form submitted!') // Replace with actual submission logic
-      setFormData({ name: '', email: '', message: '' })
+
+      //Submission logic
+      // Construct the mailto link
+      const mailtoLink = `mailto:imnakul44@gmail.com?subject=${encodeURIComponent(
+         formData.title
+      )}&body=${encodeURIComponent(
+         `Name: ${formData.name}\nEmail: ${formData.email}\nMessage:${formData.message}`
+      )}`
+
+      // Open the mail client
+      window.location.href = mailtoLink
+
+      setFormData({ name: '', email: '', title: '', message: '' })
    }
 
    return (
       <>
-         <div className='max-w-4xl h-[530px] mx-auto mt-5 mb-20 bg-gradient-to-br from-gray-800 to-gray-900 text-white p-8 rounded-lg shadow-lg hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] transition-transform duration-300 hover:scale-105 border border-cyan-500'>
-            <h2 className='text-3xl font-bold mb-4 text-center text-green-400'>
+         <div className='max-w-4xl h-[520px] mx-auto mt-5 mb-24 bg-gradient-to-br from-gray-800 to-gray-900 text-white p-8 rounded-lg shadow-lg hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] transition-transform duration-300 hover:scale-105 border border-cyan-500'>
+            <h1 className='text-3xl font-bold mb-4 text-center text-green-400'>
                Contact Me
-            </h2>
+            </h1>
             <p className='text-gray-300 mb-6 text-center'>
                Got a question, project, or just want to say hi? I'd love to hear
                from you!
@@ -38,7 +50,7 @@ function Contact() {
                <div>
                   <label
                      htmlFor='name'
-                     className='block text-gray-400 font-medium'
+                     className='block text-gray-400 font-medium pb-1 pl-1'
                   >
                      Name
                   </label>
@@ -57,7 +69,7 @@ function Contact() {
                <div>
                   <label
                      htmlFor='email'
-                     className='block text-gray-400 font-medium'
+                     className='block text-gray-400 font-medium pb-1 pl-1'
                   >
                      Email
                   </label>
@@ -72,11 +84,30 @@ function Contact() {
                      className='w-full bg-gray-700 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400'
                   />
                </div>
+               {/* Title */}
+               <div>
+                  <label
+                     htmlFor='title'
+                     className='block text-gray-400 font-medium pb-1 pl-1'
+                  >
+                     Title
+                  </label>
+                  <input
+                     type='text'
+                     name='title'
+                     value={formData.title}
+                     onChange={handleInputChange}
+                     id='title'
+                     placeholder='Title'
+                     required
+                     className='w-full bg-gray-700 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400'
+                  />
+               </div>
                {/* Message */}
                <div>
                   <label
                      htmlFor='message'
-                     className='block text-gray-400 font-medium'
+                     className='block text-gray-400 font-medium pb-1 pl-1'
                   >
                      Message
                   </label>
@@ -88,14 +119,14 @@ function Contact() {
                      placeholder='Your Message'
                      rows='5'
                      required
-                     className='w-full bg-gray-700 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400'
+                     className='w-full bg-gray-700 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400 mb-2'
                   ></textarea>
                </div>
                {/* Submit Button */}
                <div className='flex justify-center'>
                   <button
                      type='submit'
-                     className='px-6 py-3 bg-green-500 text-black font-medium rounded-lg shadow-md hover:bg-green-600 focus:ring-4 focus:ring-green-300 transition-all duration-300 transform hover:scale-105'
+                     className='px-6 py-3 bg-green-500 text-black font-medium rounded-lg shadow-md  focus:ring-4 focus:ring-green-300 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.6)]'
                   >
                      Send Message
                   </button>

@@ -24,7 +24,7 @@ function App() {
                <h1 className=' text-white text-6xl font-bold mt-12 mb-12 ml-12 font-sans hover:text-cyan-400 hover:underline'>
                   Projects:
                </h1>
-               <div className='flex flex-row justify-evenly flex-wrap gap-y-20 mb-40'>
+               <div className='flex flex-row justify-evenly flex-wrap gap-y-20'>
                   <Projects
                      imageSrc='/assets/1.jpg'
                      title='HouseMarketPlace'
@@ -64,7 +64,7 @@ function App() {
                </div>
             </div>
 
-            <div id='contact' className='pt-20'>
+            <div id='contact' className='pt-[100px]'>
                <Contact />
             </div>
          </div>
