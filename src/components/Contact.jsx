@@ -25,7 +25,7 @@ function Contact() {
 
    return (
       <>
-         <div className='max-w-3xl mx-auto mt-10 bg-gradient-to-br from-gray-800 to-gray-900 text-white p-8 rounded-lg shadow-lg hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] transition-transform duration-300 hover:scale-105'>
+         <div className='max-w-4xl h-[530px] mx-auto mt-5 mb-20 bg-gradient-to-br from-gray-800 to-gray-900 text-white p-8 rounded-lg shadow-lg hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] transition-transform duration-300 hover:scale-105 border border-cyan-500'>
             <h2 className='text-3xl font-bold mb-4 text-center text-green-400'>
                Contact Me
             </h2>
@@ -95,7 +95,7 @@ function Contact() {
                <div className='flex justify-center'>
                   <button
                      type='submit'
-                     className='px-6 py-3 bg-green-500 text-white font-medium rounded-lg shadow-md hover:bg-green-600 focus:ring-4 focus:ring-green-300 transition-all duration-300 transform hover:scale-105'
+                     className='px-6 py-3 bg-green-500 text-black font-medium rounded-lg shadow-md hover:bg-green-600 focus:ring-4 focus:ring-green-300 transition-all duration-300 transform hover:scale-105'
                   >
                      Send Message
                   </button>

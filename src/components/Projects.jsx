@@ -6,13 +6,16 @@ const Projects = ({ imageSrc, title, description, link }) => {
    return (
       <>
          {/* Card for showing projects*/}
-         <div className='max-w-xl h-[420px] mx-auto mb-20 bg-trasparent rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-110 hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.6)] border border-green-400'>
-            {/* hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] */}
-            {/* hover:shadow-[0_0_30px_10px_rgba(0,255,0,0.6)] */}
+         {/* flex-1 min-w-[300px] max-w-[430px] h-[420px] */}
+         <div className='max-w-xl h-[420px] mx-auto bg-trasparent rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-110 hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] border border-cyan-400 z-20'>
+            {/* green glow+border: */}
+            {/* hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.6)] border border-green-400 */}{' '}
+            {/* Cyan glow+border: */}
+            {/* hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] border border-cyan-400  */}
             <img
                src={imageSrc}
                alt={title}
-               className='w-full h-[275px] object-cover border-b border-green-400'
+               className='w-full h-[275px] object-cover border-b border-cyan-400'
             />
             <div className='p-4 flex flex-col justify-between'>
                <h2 className='text-xl font-semibold text-white'>{title}</h2>
@@ -21,7 +24,7 @@ const Projects = ({ imageSrc, title, description, link }) => {
                   href={link}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='inline-block my-3 text-orange-300 bg-transparent font-medium px-2 py-3 rounded-md transform transition-all duration-300 hover:bg-[linear-gradient(to_right,_#8bc6ec,_#b4e1d1,_#a0d2a1,_#c1d9e6)] hover:text-xl border border-green-400 hover:text-black'
+                  className='inline-block my-3 text-orange-300 bg-transparent font-medium px-2 py-3 rounded-md transform transition-all duration-300 hover:bg-[linear-gradient(to_right,_#8bc6ec,_#b4e1d1,_#a0d2a1,_#c1d9e6)] hover:text-xl border border-cyan-400 hover:text-black'
                >
                   <div className='flex justify-center gap-x-2 items-center'>
                      Visit Live

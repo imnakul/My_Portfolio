@@ -1,3 +1,5 @@
+/* THEME - DARK BLUE background, Green Glowing Text, Cyan cursor, boundaries design glow etc... , Orange Glow Links... , Pink for texts.... */
+
 .text-white {
    /* Soft teal-cyan text for readability */
    /* color: #a3f7ff !important;  */
@@ -22,6 +24,20 @@ a {
    text-shadow: 0px 2px 15px rgba(250, 134, 10, 0.6);
 }
 
-.clip-path-circle {
-   clip-path: circle(90% at center);
+/* Neon Gradient Background CSS*/
+@keyframes gradient-x {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
+}
+
+.animate-gradient-x {
+   background-size: 300% 300%;
+   animation: gradient-x 4s linear infinite;
 }
