@@ -20,11 +20,11 @@ function App() {
                <About />
             </div>
 
-            <div id='projects' className='pt-16 flex flex-col'>
-               <h1 className=' text-white text-6xl font-bold mt-12 mb-12 ml-12 font-sans hover:text-cyan-400 hover:underline'>
-                  Projects:
+            <div id='projects' className='pt-11 flex flex-col'>
+               <h1 className='text-4xl text-white xl:text-5xl font-bold m-9 xl:m-12 font-sans hover:text-cyan-400 self-center '>
+                  Projects
                </h1>
-               <div className='flex flex-row justify-evenly flex-wrap gap-y-20'>
+               <div className='flex flex-row justify-evenly flex-wrap gap-y-10'>
                   <Projects
                      imageSrc='/assets/1.jpg'
                      title='HouseMarketPlace'

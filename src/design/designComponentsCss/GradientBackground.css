@@ -5,22 +5,29 @@ body {
    /* background: linear-gradient(45deg, #1d2c4d, #0f172a, #24243e, #302b63, #0f0c29); reverse gradient*/
 
    /* best ones till now, but keeping above if after content may need to change */
-   background: linear-gradient(
+   /* background: linear-gradient(
       -270deg,
       #0f0c29 20%,
       #302b63 40%,
       #24243e 60%,
       #0f172a 80%,
       #1d2c4d
-   );
+   ); */
    /* background: radial-gradient(circle, #0f0c29, #302b63, #24243e, #0f172a, #1d2c4d);  */
 
-   background-size: 400% 400%;
+   /* background: linear-gradient(to top, #09203f 0%, #537895 100%);*/
+
+    background: linear-gradient(-20deg, #055354 0%, #11072e 100%);
+    /* background: linear-gradient(65.5deg, rgb(32, 44, 71) -15.1%, rgb(39, 61, 82) -15.1%); */
+    /* background: linear-gradient(90deg, rgb(2, 250, 70) -1.7%, rgb(2, 238, 250) 21.1%, rgb(174, 8, 237) 46%, rgb(237, 8, 117) 64.2%, rgb(237, 8, 117) 81%, rgb(248, 136, 0) 97.2%); */
+    
+   
+   /* background-size: 400% 400%;
    animation: gradient 15s ease infinite;
-   height: 100vh;
+   height: 100vh; */
 }
 
-@keyframes gradient {
+/* @keyframes gradient {
    0% {
       background-position: 0% 50%;
    }
@@ -30,7 +37,7 @@ body {
    100% {
       background-position: 0% 50%;
    }
-}
+} */
 
 h1,
 h5 {

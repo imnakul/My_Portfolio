@@ -7,24 +7,30 @@ const Projects = ({ imageSrc, title, description, link }) => {
       <>
          {/* Card for showing projects*/}
          {/* flex-1 min-w-[300px] max-w-[430px] h-[420px] */}
-         <div className='max-w-xl h-[420px] mx-auto bg-trasparent rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-110 hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] border border-cyan-400 z-20'>
+         {/* max-w-xs xl:max-w-md h-auto mx-auto //working very good - 3 columns in medium font looking conjusted */}
+         {/* max-w-xs xl:max-w-9 h-auto mx-auto //working very good - 3 columns in medium font-perfect, wide for picture + plenty space around as well */}
+         {/* max-w-xs xl:size-auto h-auto mx-7 //working very good - 4 columns little open, change mx-8 for 3 columns only but then too slim - but no image proper*/}
+         <div className='max-w-xs xl:max-w-96 h-auto mx-7 bg-trasparent rounded-md shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] border border-cyan-400 z-20'>
             {/* green glow+border: */}
-            {/* hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.6)] border border-green-400 */}{' '}
+            {/* hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.6)] border border-green-400 */}
             {/* Cyan glow+border: */}
             {/* hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] border border-cyan-400  */}
+
             <img
                src={imageSrc}
                alt={title}
-               className='w-full h-[275px] object-cover border-b border-cyan-400'
+               className='w-auto xl:w-full h-auto xl:h-[275px] object-cover border-b border-cyan-400'
             />
             <div className='p-4 flex flex-col justify-between'>
-               <h2 className='text-xl font-semibold text-white'>{title}</h2>
+               <h2 className='text-xl font-semibold self-center text-white'>
+                  {title}
+               </h2>
                <p className='text-pink-400 mt-2'>{description}</p>
                <a
                   href={link}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='inline-block my-3 text-orange-300 bg-transparent font-medium px-2 py-3 rounded-md transform transition-all duration-300 hover:bg-[linear-gradient(to_right,_#8bc6ec,_#b4e1d1,_#a0d2a1,_#c1d9e6)] hover:text-xl border border-cyan-400 hover:text-black'
+                  className='inline-block my-3 text-orange-300 bg-transparent font-medium px-2 py-3 rounded-md transform transition-all duration-300 hover:animate-bounce hover:text-xl border border-cyan-400 hover:text-cyan-300'
                >
                   <div className='flex justify-center gap-x-2 items-center'>
                      Visit Live
