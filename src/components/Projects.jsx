@@ -10,7 +10,7 @@ const Projects = ({ imageSrc, title, description, link }) => {
          {/* max-w-xs xl:max-w-md h-auto mx-auto //working very good - 3 columns in medium font looking conjusted */}
          {/* max-w-xs xl:max-w-9 h-auto mx-auto //working very good - 3 columns in medium font-perfect, wide for picture + plenty space around as well */}
          {/* max-w-xs xl:size-auto h-auto mx-7 //working very good - 4 columns little open, change mx-8 for 3 columns only but then too slim - but no image proper*/}
-         <div className='max-w-xs xl:max-w-96 h-auto mx-7 bg-trasparent rounded-md shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] border border-cyan-400 z-20'>
+         <div className='max-w-xs xl:max-w-96 h-auto mx-7 bg-trasparent rounded-md overflow-hidden transition-transform duration-300 xl:hover:scale-105 xl:hover:shadow-[0_0_20px_10px_rgba(0,255,255,0.5)] xl:border border-cyan-400 z-20 xl:hover:border-hidden shadow-[0_0_10px_8px_rgba(0,255,255,0.5)] xl:shadow-none'>
             {/* green glow+border: */}
             {/* hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.6)] border border-green-400 */}
             {/* Cyan glow+border: */}
@@ -30,7 +30,7 @@ const Projects = ({ imageSrc, title, description, link }) => {
                   href={link}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='inline-block my-3 text-orange-300 bg-transparent font-medium px-2 py-3 rounded-md transform transition-all duration-300 hover:animate-bounce hover:text-xl border border-cyan-400 hover:text-cyan-300'
+                  className='inline-block my-3 text-orange-400 bg-transparent font-semibold px-2 py-3 rounded-md transform transition-all duration-300 xl:hover:text-xl animate-bounce border border-cyan-400 hover:text-cyan-300'
                >
                   <div className='flex justify-center gap-x-2 items-center'>
                      Visit Live
@@ -41,6 +41,27 @@ const Projects = ({ imageSrc, title, description, link }) => {
                            className='w-24 h-24 object-cover' // Adjust size to fit the button
                         />
                      </div> */}
+                     {/* <a
+                        href='#'
+                        class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+                     >
+                        Read more
+                        <svg
+                           class='rtl:rotate-180 w-3.5 h-3.5 ms-2'
+                           aria-hidden='true'
+                           xmlns='http://www.w3.org/2000/svg'
+                           fill='none'
+                           viewBox='0 0 14 10'
+                        >
+                           <path
+                              stroke='currentColor'
+                              stroke-linecap='round'
+                              stroke-linejoin='round'
+                              stroke-width='2'
+                              d='M1 5h12m0 0L9 1m4 4L9 9'
+                           />
+                        </svg>
+                     </a> */}
                   </div>
                </a>
             </div>

@@ -15,13 +15,16 @@ body {
    ); */
    /* background: radial-gradient(circle, #0f0c29, #302b63, #24243e, #0f172a, #1d2c4d);  */
 
-   /* background: linear-gradient(to top, #09203f 0%, #537895 100%);*/
+   /* background: linear-gradient(to top, #09203f 0%, #537895 100%); */
+   /* background: linear-gradient(-20deg, #055354 0%, #11072e 100%); */
 
-    background: linear-gradient(-20deg, #055354 0%, #11072e 100%);
-    /* background: linear-gradient(65.5deg, rgb(32, 44, 71) -15.1%, rgb(39, 61, 82) -15.1%); */
-    /* background: linear-gradient(90deg, rgb(2, 250, 70) -1.7%, rgb(2, 238, 250) 21.1%, rgb(174, 8, 237) 46%, rgb(237, 8, 117) 64.2%, rgb(237, 8, 117) 81%, rgb(248, 136, 0) 97.2%); */
-    
-   
+   background: #11072e; /* Using this */
+   /* background: #081e23; */ /* trying out */
+   /* background: #055354 ; */
+
+   /* background: linear-gradient(65.5deg, rgb(32, 44, 71) -15.1%, rgb(39, 61, 82) -15.1%); */
+   /* background: linear-gradient(90deg, rgb(2, 250, 70) -1.7%, rgb(2, 238, 250) 21.1%, rgb(174, 8, 237) 46%, rgb(237, 8, 117) 64.2%, rgb(237, 8, 117) 81%, rgb(248, 136, 0) 97.2%); */
+
    /* background-size: 400% 400%;
    animation: gradient 15s ease infinite;
    height: 100vh; */

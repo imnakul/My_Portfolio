@@ -126,7 +126,7 @@ function Contact() {
                <div className='flex justify-center'>
                   <button
                      type='submit'
-                     className='px-4 py-2 bg-green-500 text-black font-medium rounded-lg shadow-md  focus:ring-4 focus:ring-green-300 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.6)]'
+                     className='px-4 py-2 bg-green-500 text-blue-50 font-medium rounded-lg shadow-md hover:ring-2 hover:ring-green-300 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.6)]'
                   >
                      Send Message
                   </button>
