@@ -18,9 +18,16 @@ body {
    /* background: linear-gradient(to top, #09203f 0%, #537895 100%); */
    /* background: linear-gradient(-20deg, #055354 0%, #11072e 100%); */
 
-   background: #11072e; /* Using this */
+   /* background: #11072e; /* Using this */
    /* background: #081e23; */ /* trying out */
    /* background: #055354 ; */
+
+   /* Ai Try*/
+   /* background-color: #0A1630;  //looking good*/
+   /* background: radial-gradient(circle, #122C50, #0A1630); //cool */
+   
+
+  
 
    /* background: linear-gradient(65.5deg, rgb(32, 44, 71) -15.1%, rgb(39, 61, 82) -15.1%); */
    /* background: linear-gradient(90deg, rgb(2, 250, 70) -1.7%, rgb(2, 238, 250) 21.1%, rgb(174, 8, 237) 46%, rgb(237, 8, 117) 64.2%, rgb(237, 8, 117) 81%, rgb(248, 136, 0) 97.2%); */
