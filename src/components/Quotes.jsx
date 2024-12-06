@@ -12,7 +12,8 @@ const QuoteSection = () => {
             {
                method: 'GET',
                headers: {
-                  'X-Api-Key': '+aSb1w8rKyV1bHIzo9rwiw==O5XsatrRBPBWK7wD',
+                  'X-Api-Key': '',
+                  //   +aSb1w8rKyV1bHIzo9rwiw==O5XsatrRBPBWK7wD
                   'Content-Type': 'application/json',
                },
             }
@@ -23,7 +24,8 @@ const QuoteSection = () => {
          if (data && data.length > 0) {
             setQuote(data[0].quote) // Use the first quote from the response
          } else {
-            setQuote('No quotes available at the moment.')
+            // setQuote('No quotes available at the moment.')
+            setQuote('Change in your Life lies in your Hands only.')
          }
       } catch (error) {
          setQuote(
@@ -48,8 +50,11 @@ const QuoteSection = () => {
    return (
       <div
          ref={quoteRef}
-         className='max-w-xs xl:max-w-2xl text-center text-white text-xl xl:text-2xl font-bold font-podcova mx-auto bg-gradient-to-r from-blue-900 to-purple-900 rounded-lg shadow-lg px-4 py-2 border-2 border-cyan-300'
+         className='max-w-xs xl:max-w-2xl text-center text-black text-xl xl:text-2xl font-extra-light font-playwrite-hr mx-auto  rounded-lg shadow-lg px-4 py-2 border-2 border-cyan-300 animate-staticrainbow bg-[length:200%_200%] bg-clip-border  drop-shadow-lg'
       >
+         {/* text-shadow */}
+         {/* bg-gradient-to-r from-blue-900 to-purple-900   */}
+         {/* bg-gradient-to-r from-purple-950 via-gray-900 to-purple-950 animate-gradient-x */}
          {quote}
       </div>
    )

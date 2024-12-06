@@ -211,13 +211,13 @@ const AboutSection = () => {
    }
 
    return (
-      <div className='flex flex-col justify-center items-center h-screen bg-gradient-to-b from-[#11072e] to-[#055354]'>
+      <div className='flex flex-col justify-center items-center h-screen '>
          {/* Main Container */}
          {/* */}
          <div
-            className={`relative transition-all duration-500 ease-in-out ${
+            className={`relative transition-all duration-1000 ease-in-out ${
                expanded
-                  ? 'max-w-xs xl:max-w-6xl xl:h-[400px] my-auto bg-gradient-to-b from-[#0A1630] to-[#122C50]  xl:hover:scale-110 rounded-md shadow-lg xl:p-8 p-6 border-2 border-cyan-400 xl:hover:shadow-[0_0_20px_10px_rgba(0,255,255,0.6)] xl:hover:border-hidden'
+                  ? 'max-w-xs xl:max-w-6xl xl:h-[400px] my-auto bg-gradient-to-b from-[#0A1630] to-[#122C50]  xl:hover:scale-105 rounded-md shadow-lg xl:p-8 p-6 border-2 border-cyan-400 xl:hover:shadow-[0_0_20px_10px_rgba(0,255,255,0.6)] xl:hover:border-hidden'
                   : ''
             }`}
             onClick={toggleExpand}
@@ -231,23 +231,34 @@ const AboutSection = () => {
                         <h2 className='text:5xl xl:text-7xl font-bold text-cyan-300 xl:mb-6 mb-2 font-serif'>
                            Hi, I'm Nakul
                         </h2>
-                        <p className='text-white font-mono text-xs xl:text-lg xl:mb-0 mb-2'>
+                        <p className='text-white font-mono text-xs xl:text-lg xl:mb-6 mb-4'>
                            A passionate web developer who loves creating
                            innovative, user-friendly applications. With a knack
                            for solving real-world problems, I focus on bringing
                            creative ideas to life.
                         </p>
+                        <a
+                           href='https://www.linkedin.com/in/nakul-srivastava-a8426033b/'
+                           target='_blank'
+                           rel='noopener noreferrer'
+                           className='hover:scale-110 transition-transform'
+                        >
+                           <img
+                              src='/assets/icons8-linkedin.gif'
+                              alt='LinkedIn'
+                              className='w-12 h-12'
+                           />
+                           {/* <a target="_blank" href="https://icons8.com/icon/TpMqKvVFD9pP/linkedin-2">LinkedIn 2</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */}
+                        </a>
                      </div>
 
                      {/* Image Placeholder */}
                      <div className='relative w-36 h-36 xl:w-[250px] xl:h-[250px] bg-gradient-to-b from-[#122C50] to-[#0A1630] rounded-full overflow-hidden xl:overflow-hidden shadow-lg border-4 border-cyan-400'>
                         {/* Image */}
                         <img
-                           src='/assets/mypic_cutout.png'
+                           src='/assets/pic2.png'
                            alt='profilepicture'
-                           className='absolute w-[150%] h-auto -top-[20%] left-1/2 transform xl:-translate-x-32 -translate-x-[76px] transition-transform duration-500 ease-in-out'
-                           // hover:scale-110
-                           // hover:opacity-70
+                           className='absolute w-[150%] h-auto -top-[7%] left-1/2 transform xl:-translate-x-32 -translate-x-[76px] transition-transform duration-1000 ease-in-out hover:opacity-70'
                         />
                      </div>
                   </div>
@@ -268,10 +279,20 @@ const AboutSection = () => {
                <>
                   {/* Collapsed Circular Shape */}
                   <div className='flex justify-center items-center'>
-                     <div className='w-40 h-40 xl:w-60 xl:h-60 flex items-center justify-center rounded-full bg-gradient-to-b from-[#0A1630] to-[#122C50] text-center text-2xl xl:text-3xl font-extrabold xl:font-bold cursor-pointer shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] xl:shadow-none xl:hover:shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] transition-all duration-500 text-cyan-300 border-2 border-cyan-400'>
-                        Click!
+                     {/* circular shape, placeholder kind of for button */}
+                     {/* <div className='w-40 h-40 xl:w-60 xl:h-60 flex items-center justify-center rounded-full bg-gradient-to-b from-[#0A1630] to-[#122C50] text-center text-2xl xl:text-3xl font-extrabold xl:font-bold cursor-pointer shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] xl:shadow-none xl:hover:shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] transition-all duration-1000 text-cyan-300 border-2 border-cyan-400 overflow-hidden'> */}
+                     <div className='w-40 h-40 flex items-center justify-center cursor-pointer shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] xl:shadow-none xl:hover:shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] transition-all duration-1000 text-cyan-300 border-2 border-cyan-400 overflow-hidden'>
+                        <img
+                           src='/assets/click-here.gif'
+                           alt='click Me!'
+                           className='size-lg'
+                        />
                      </div>
+                     {/* <a href='https://www.freepik.com/animated-icon/info_16104277#fromView=search&page=1&position=26&uuid=d8173e8c-a8fa-4147-aa0a-ae40f580dd51'>
+                           Icon by Freepik
+                        </a> */}
                   </div>
+                  {/* </div> */}
                </>
             )}
          </div>

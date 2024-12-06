@@ -19,7 +19,7 @@ function App() {
                <Navbar />
 
                {/* Sections */}
-               <div id='about' className='xl:pt-11'>
+               <div id='about' className='xl:pt-6'>
                   <About />
                </div>
 
