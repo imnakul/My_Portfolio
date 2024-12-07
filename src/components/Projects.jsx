@@ -2,10 +2,16 @@ import { useState } from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { useNavigate } from 'react-router-dom'
 
 // Single color hover - working fine
 
 const Projects = ({ images, title, description, link }) => {
+   const navigate = useNavigate()
+   const projectImageClick = () => {
+      navigate('/project')
+   }
+
    // Slider settings for smooth swiping and dots
    const sliderSettings = {
       dots: true,
@@ -53,8 +59,12 @@ const Projects = ({ images, title, description, link }) => {
                         <img
                            src={imageSrc}
                            alt={`${title} Slide ${index + 1}`}
-                           className='w-auto xl:w-full h-auto xl:h-[275px] object-cover border-b border-cyan-400'
+                           className='w-auto xl:w-full h-auto xl:h-[275px] object-cover border-b border-cyan-400 bg-opacity-50 text-white opacity-70 hover:opacity-100 transition-opacity duration-300'
+                           onClick={projectImageClick}
                         />
+                        {/* <div className='absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white opacity-0 hover:opacity-100 transition-opacity duration-300 z-10'>
+                           <p className='text-xl'>Hovered Text</p>
+                        </div> */}
                      </div>
                   ))}
                </Slider>
