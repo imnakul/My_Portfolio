@@ -59,7 +59,7 @@ const Projects = ({ images, title, description, link }) => {
                         <img
                            src={imageSrc}
                            alt={`${title} Slide ${index + 1}`}
-                           className='w-auto xl:w-full h-auto xl:h-[275px] object-cover border-b border-cyan-400 bg-opacity-50 text-white opacity-70 hover:opacity-100 transition-opacity duration-300'
+                           className='w-auto xl:w-full h-auto xl:h-[275px] object-cover border-b border-cyan-400 bg-opacity-50 text-white opacity-100 hover:opacity-70 transition-opacity duration-300'
                            onClick={projectImageClick}
                         />
                         {/* <div className='absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white opacity-0 hover:opacity-100 transition-opacity duration-300 z-10'>
@@ -98,14 +98,48 @@ const Projects = ({ images, title, description, link }) => {
                </p>
 
                {/* Visit Link Button */}
-               <div className='flex justify-center items-center font-playwrite-hr font-normal xl:font-semibold'>
+               <div className='flex justify-between font-playwrite-hr font-normal xl:font-semibold'>
+                  <a
+                     href='#'
+                     onClick={(e) => {
+                        e.preventDefault()
+                        navigate('/project')
+                     }}
+                     rel='noopener noreferrer'
+                     // className='xl:w-32 xl:h-12 w-28 h-10 inline-flex items-center justify-start py-1 pl-1 xl:pl-2 mt-4 mb-2 text-green-50 bg-emerald-400 rounded-md transform transition-all duration-300 xl:animate-bounce animate-bounce border border-cyan-400 hover:text-cyan-300 text-sm xl:text-base'
+                     className='inline-flex items-center justify-start pl-1 xl:pl-2 mt-4 mb-2 mr-2'
+                  >
+                     {/* Details */}
+                     {/* <svg
+                        class='rtl:rotate-180 w-4 h-4 ms-2'
+                        aria-hidden='true'
+                        xmlns='http://www.w3.org/2000/svg'
+                        fill='none'
+                        viewBox='0 0 14 10'
+                     >
+                        <path
+                           stroke='currentColor'
+                           stroke-linecap='round'
+                           stroke-linejoin='round'
+                           stroke-width='2'
+                           d='M1 5h12m0 0L9 1m4 4L9 9'
+                        />
+                     </svg> */}
+                     <img
+                        src='/assets/info.png'
+                        alt=''
+                        className='w-10 h-10 animate-bounce'
+                     />
+                  </a>
+
                   <a
                      href={link}
                      target='_blank'
                      rel='noopener noreferrer'
-                     className='xl:w-32 xl:h-12 w-28 h-10 inline-flex items-center justify-start py-1 pl-1 xl:pl-2 mt-4 mb-2 text-green-50 bg-red-500 rounded-md transform transition-all duration-300 xl:animate-bounce animate-bounce border border-cyan-400 hover:text-cyan-300 text-sm xl:text-base'
+                     // className='xl:w-32 xl:h-12 w-28 h-10 inline-flex items-center justify-start py-1 pl-1 xl:pl-2 mt-4 mb-2 text-green-50 bg-red-500 rounded-md transform transition-all duration-300 xl:animate-bounce animate-bounce border border-cyan-400 hover:text-cyan-300 text-sm xl:text-base'
+                     className='inline-flex items-center justify-start pl-1 xl:pl-2 mt-4 mb-2 mr-2'
                   >
-                     Visit Live
+                     {/* Visit Live
                      <svg
                         class='rtl:rotate-180 w-4 h-4 ms-2'
                         aria-hidden='true'
@@ -120,7 +154,12 @@ const Projects = ({ images, title, description, link }) => {
                            stroke-width='2'
                            d='M1 5h12m0 0L9 1m4 4L9 9'
                         />
-                     </svg>
+                     </svg> */}
+                     <img
+                        src='/assets/live3.png'
+                        alt=''
+                        className='w-16 h-16 animate-bounce'
+                     />
                   </a>
                </div>
             </div>

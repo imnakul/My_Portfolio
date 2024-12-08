@@ -14,6 +14,13 @@ function Home() {
          const section = document.querySelector(hash)
          if (section) {
             section.scrollIntoView({ behavior: 'auto' })
+
+            // Remove the hash from the URL after scrolling
+            window.history.replaceState(
+               {},
+               document.title,
+               window.location.pathname
+            )
          }
       }
    }, [])
