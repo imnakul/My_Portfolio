@@ -75,11 +75,15 @@ const Projects = ({ images, title, description, link }) => {
                      src={images[0]}
                      alt={`${title} Slide 1`}
                      className='w-auto xl:w-full h-auto xl:h-[275px] object-cover border-b border-cyan-400'
+                     onClick={projectImageClick}
                   />
                </div>
             ) : (
                // No Images Case
-               <div className='w-auto xl:w-full h-auto xl:h-[275px] flex items-center justify-center bg-gray-800 text-gray-500 border-b border-cyan-400'>
+               <div
+                  className='w-auto xl:w-full h-auto xl:h-[275px] flex items-center justify-center bg-gray-800 text-gray-500 border-b border-cyan-400'
+                  onClick={projectImageClick}
+               >
                   No Images Available
                </div>
             )}
