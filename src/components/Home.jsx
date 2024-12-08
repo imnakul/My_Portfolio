@@ -4,8 +4,19 @@ import About from './About'
 import Quotes from './Quotes'
 import Navbar from './Navbar'
 import CustomCursor from '../design/designComponents/CustomCursor'
+import { useEffect } from 'react'
 
 function Home() {
+   useEffect(() => {
+      // Scroll to the section if there's a hash in the URL
+      const hash = window.location.hash
+      if (hash) {
+         const section = document.querySelector(hash)
+         if (section) {
+            section.scrollIntoView({ behavior: 'auto' })
+         }
+      }
+   }, [])
    return (
       <>
          <div className='bg-gradient-to-b from-[#0A1630] via-[#0F1E40] to-[#122C50] min-h-screen'>
