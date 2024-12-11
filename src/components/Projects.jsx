@@ -6,11 +6,11 @@ import { useNavigate } from 'react-router-dom'
 
 // Single color hover - working fine
 
-const Projects = ({ images, title, description, link }) => {
+const Projects = ({ images, title, description, link, id }) => {
    const navigate = useNavigate()
-   const projectImageClick = () => {
-      navigate('/project')
-   }
+   // const projectImageClick = () => {
+   //    navigate('/project')
+   // }
 
    // Slider settings for smooth swiping and dots
    const sliderSettings = {
@@ -60,7 +60,6 @@ const Projects = ({ images, title, description, link }) => {
                            src={imageSrc}
                            alt={`${title} Slide ${index + 1}`}
                            className='w-auto xl:w-full h-auto xl:h-[275px] object-cover border-b border-cyan-400 bg-opacity-50 text-white opacity-100 hover:opacity-70 transition-opacity duration-300'
-                           onClick={projectImageClick}
                         />
                         {/* <div className='absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white opacity-0 hover:opacity-100 transition-opacity duration-300 z-10'>
                            <p className='text-xl'>Hovered Text</p>
@@ -75,15 +74,11 @@ const Projects = ({ images, title, description, link }) => {
                      src={images[0]}
                      alt={`${title} Slide 1`}
                      className='w-auto xl:w-full h-auto xl:h-[275px] object-cover border-b border-cyan-400'
-                     onClick={projectImageClick}
                   />
                </div>
             ) : (
                // No Images Case
-               <div
-                  className='w-auto xl:w-full h-auto xl:h-[275px] flex items-center justify-center bg-gray-800 text-gray-500 border-b border-cyan-400'
-                  onClick={projectImageClick}
-               >
+               <div className='w-auto xl:w-full h-auto xl:h-[275px] flex items-center justify-center bg-gray-800 text-gray-500 border-b border-cyan-400'>
                   No Images Available
                </div>
             )}
@@ -103,32 +98,16 @@ const Projects = ({ images, title, description, link }) => {
                      href='#'
                      onClick={(e) => {
                         e.preventDefault()
-                        navigate('/project')
+                        navigate(`/project/${id}`)
                      }}
                      rel='noopener noreferrer'
                      // className='xl:w-32 xl:h-12 w-28 h-10 inline-flex items-center justify-start py-1 pl-1 xl:pl-2 mt-4 mb-2 text-green-50 bg-emerald-400 rounded-md transform transition-all duration-300 xl:animate-bounce animate-bounce border border-cyan-400 hover:text-cyan-300 text-sm xl:text-base'
                      className='inline-flex items-center justify-start pl-1 xl:pl-2 mt-4 mb-2 mr-2'
                   >
-                     {/* Details */}
-                     {/* <svg
-                        class='rtl:rotate-180 w-4 h-4 ms-2'
-                        aria-hidden='true'
-                        xmlns='http://www.w3.org/2000/svg'
-                        fill='none'
-                        viewBox='0 0 14 10'
-                     >
-                        <path
-                           stroke='currentColor'
-                           stroke-linecap='round'
-                           stroke-linejoin='round'
-                           stroke-width='2'
-                           d='M1 5h12m0 0L9 1m4 4L9 9'
-                        />
-                     </svg> */}
                      <img
                         src='/assets/info.png'
                         alt=''
-                        className='w-10 h-10 animate-bounce'
+                        className='w-10 h-10 hover:animate-spin'
                      />
                   </a>
 
@@ -139,26 +118,10 @@ const Projects = ({ images, title, description, link }) => {
                      // className='xl:w-32 xl:h-12 w-28 h-10 inline-flex items-center justify-start py-1 pl-1 xl:pl-2 mt-4 mb-2 text-green-50 bg-red-500 rounded-md transform transition-all duration-300 xl:animate-bounce animate-bounce border border-cyan-400 hover:text-cyan-300 text-sm xl:text-base'
                      className='inline-flex items-center justify-start pl-1 xl:pl-2 mt-4 mb-2 mr-2'
                   >
-                     {/* Visit Live
-                     <svg
-                        class='rtl:rotate-180 w-4 h-4 ms-2'
-                        aria-hidden='true'
-                        xmlns='http://www.w3.org/2000/svg'
-                        fill='none'
-                        viewBox='0 0 14 10'
-                     >
-                        <path
-                           stroke='currentColor'
-                           stroke-linecap='round'
-                           stroke-linejoin='round'
-                           stroke-width='2'
-                           d='M1 5h12m0 0L9 1m4 4L9 9'
-                        />
-                     </svg> */}
                      <img
-                        src='/assets/live3.png'
+                        src='/assets/share2.png'
                         alt=''
-                        className='w-16 h-16 animate-bounce'
+                        className='w-9 h-9 hover:animate-pulse'
                      />
                   </a>
                </div>

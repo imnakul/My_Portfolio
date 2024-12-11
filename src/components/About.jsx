@@ -211,50 +211,89 @@ const AboutSection = () => {
    }
 
    return (
-      <div className='flex flex-col justify-center items-center h-screen '>
-         {/* Main Container */}
-         {/* */}
+      <div className='flex flex-col justify-center items-center h-screen'>
          <div
             className={`relative transition-all duration-1000 ease-in-out ${
                expanded
-                  ? 'max-w-xs xl:max-w-6xl xl:h-[400px] my-auto bg-gradient-to-b from-[#0A1630] to-[#122C50]  xl:hover:scale-105 rounded-md shadow-lg xl:p-8 p-6 border-2 border-cyan-400 xl:hover:shadow-[0_0_20px_10px_rgba(0,255,255,0.6)] xl:hover:border-hidden'
+                  ? 'max-w-xs xl:max-w-6xl xl:h-[400px] my-auto bg-gradient-to-b from-[#0A1630] to-[#122C50] xl:hover:scale-105 rounded-md shadow-lg xl:p-8 p-6 border-2 border-cyan-400 xl:hover:shadow-[0_0_20px_10px_rgba(0,255,255,0.6)] xl:hover:border-hidden'
                   : ''
             }`}
             onClick={toggleExpand}
          >
             {expanded ? (
                <>
-                  {/* Expanded State */}
                   <div className='flex flex-col xl:flex-row justify-between items-center h-full'>
                      {/* Text Content */}
-                     <div className='flex-1 pr-10'>
-                        <h2 className='text:5xl xl:text-7xl font-bold text-cyan-300 xl:mb-6 mb-2 font-serif'>
+                     <div className='flex-1 xl:pr-10 pr-2'>
+                        <h2 className='text:5xl xl:text-7xl font-bold text-cyan-300 mb-2 xl:mb-4 font-serif'>
                            Hi, I'm Nakul
                         </h2>
-                        <p className='text-white font-mono text-xs xl:text-lg xl:mb-6 mb-4'>
+                        <p className='text-white font-mono text-xs xl:text-lg mb-2 xl:mb-2'>
                            A passionate web developer who loves creating
                            innovative, user-friendly applications. With a knack
                            for solving real-world problems, I focus on bringing
                            creative ideas to life.
                         </p>
-                        <a
-                           href='https://www.linkedin.com/in/nakul-srivastava-a8426033b/'
-                           target='_blank'
-                           rel='noopener noreferrer'
-                           className='hover:scale-110 transition-transform'
-                        >
-                           <img
-                              src='/assets/icons8-linkedin.gif'
-                              alt='LinkedIn'
-                              className='w-12 h-12'
-                           />
-                           {/* <a target="_blank" href="https://icons8.com/icon/TpMqKvVFD9pP/linkedin-2">LinkedIn 2</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */}
-                        </a>
+
+                        {/* Skills and Connect Section */}
+                        <div className='flex flex-0 justify-between items-center mt-6 xl:mt-6 xl:ml-6 ml-0'>
+                           {/* Skills */}
+                           <div className='flex flex-col items-center'>
+                              <h3 className='text-cyan-300 font-normal text-md xl:text-2xl xl:mb-4 mb-2 items-center'>
+                                 Skills
+                              </h3>
+                              <div className='grid grid-cols-5 gap-1 xl:gap-6 mr-2 mb-6'>
+                                 <img
+                                    src='/assets/icons/icons8-html-5.png'
+                                    alt='HTML'
+                                    className='md:w-12 md:h-12 h-8 w-8'
+                                 />
+                                 <img
+                                    src='/assets/icons/icons8-css.gif'
+                                    alt='CSS'
+                                    className='md:w-12 md:h-12 h-8 w-8'
+                                 />
+                                 <img
+                                    src='/assets/icons/icons8-java-script.png'
+                                    alt='JavaScript'
+                                    className='md:w-12 md:h-12 h-8 w-8'
+                                 />
+                                 <img
+                                    src='/assets/icons/icons8-react.gif'
+                                    alt='React'
+                                    className='md:w-12 md:h-12 h-8 w-8'
+                                 />
+                                 <img
+                                    src='/assets/icons/icons8-tailwind.png'
+                                    alt='Tailwind CSS'
+                                    className='md:w-12 md:h-12 h-8 w-8'
+                                 />
+                              </div>
+                           </div>
+
+                           {/* Connect */}
+                           <div className='flex flex-1 flex-col items-center mb-6 ml-0'>
+                              <h3 className='text-cyan-300 font-normal text-md xl:text-2xl xl:mb-4 mb-2'>
+                                 Connect
+                              </h3>
+                              <a
+                                 href='https://www.linkedin.com/in/nakul-srivastava-a8426033b/'
+                                 target='_blank'
+                                 rel='noopener noreferrer'
+                                 className='hover:scale-110 transition-transform'
+                              >
+                                 <img
+                                    src='/assets/icons/icons8-linkedin.gif'
+                                    alt='LinkedIn'
+                                    className='h-8 w-8 md:w-12 md:h-12'
+                                 />
+                              </a>
+                           </div>
+                        </div>
                      </div>
 
-                     {/* Image Placeholder */}
-                     <div className='relative w-36 h-36 xl:w-[250px] xl:h-[250px] bg-gradient-to-b from-[#122C50] to-[#0A1630] rounded-full overflow-hidden xl:overflow-hidden shadow-lg border-4 border-cyan-400'>
-                        {/* Image */}
+                     {/* Image */}
+                     <div className='relative self-center w-36 h-36 xl:w-[250px] xl:h-[250px] bg-gradient-to-b from-[#122C50] to-[#0A1630] rounded-full overflow-hidden xl:overflow-hidden shadow-lg border-4 border-cyan-400'>
                         <img
                            src='/assets/pic2.png'
                            alt='profilepicture'
@@ -262,25 +301,11 @@ const AboutSection = () => {
                         />
                      </div>
                   </div>
-
-                  {/* Fold Effect */}
-                  {/* Circular Fold Effect */}
-                  <div className='absolute bottom-0 right-0 w-[50px] h-[50px] bg-inherit rounded-full border-[2px] border-t-0 border-l-0 border-white/10'></div>
-
-                  {/* Collapse Button */}
-                  {/* <button
-                     className='absolute bottom-4 right-4 px-4 py-2 bg-cyan-600 text-black rounded-lg shadow-md hover:shadow-cyan-500/50 focus:outline-none hover:ring-2 hover:ring-cyan-300 transition-all duration-300 transform hover:scale-105'
-                     onClick={toggleExpand}
-                  >
-                     Collapse
-                  </button> */}
                </>
             ) : (
                <>
                   {/* Collapsed Circular Shape */}
                   <div className='flex justify-center items-center'>
-                     {/* circular shape, placeholder kind of for button */}
-                     {/* <div className='w-40 h-40 xl:w-60 xl:h-60 flex items-center justify-center rounded-full bg-gradient-to-b from-[#0A1630] to-[#122C50] text-center text-2xl xl:text-3xl font-extrabold xl:font-bold cursor-pointer shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] xl:shadow-none xl:hover:shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] transition-all duration-1000 text-cyan-300 border-2 border-cyan-400 overflow-hidden'> */}
                      <div className='w-40 h-40 flex items-center justify-center cursor-pointer shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] xl:shadow-none xl:hover:shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] transition-all duration-1000 text-cyan-300 border-2 border-cyan-400 overflow-hidden'>
                         <img
                            src='/assets/click-here.gif'
@@ -288,11 +313,7 @@ const AboutSection = () => {
                            className='size-lg'
                         />
                      </div>
-                     {/* <a href='https://www.freepik.com/animated-icon/info_16104277#fromView=search&page=1&position=26&uuid=d8173e8c-a8fa-4147-aa0a-ae40f580dd51'>
-                           Icon by Freepik
-                        </a> */}
                   </div>
-                  {/* </div> */}
                </>
             )}
          </div>

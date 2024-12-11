@@ -1,57 +1,184 @@
-import { useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
+import NeonGradientDivider from '../design/designComponents/NeonGradientDivider'
 
-function Project() {
+const Project = ({ projects }) => {
+   const { id } = useParams() // Extract project ID from URL
    const navigate = useNavigate()
+
+   const project = projects.find((p) => p.id === parseInt(id)) // Find project by ID
+
+   if (!project) return <div>Project not found!</div> // Handle invalid project ID
+
+   const nextProject = () => {
+      const currentIndex = projects.findIndex((p) => p.id === parseInt(id))
+      const nextIndex = (currentIndex + 1) % projects.length // Loop to the first project if on the last
+      navigate(`/project/${projects[nextIndex].id}`)
+   }
+
    return (
-      <>
-         <div className='bg-gradient-to-b from-[#0A1630] via-[#0F1E40] to-[#122C50] min-h-full'>
-            {/* Navbar for Project */}
-            <nav
-               className='fixed top-0 left-0 w-full bg-gradient-to-r from-purple-950 via-gray-900
-         to-purple-950 animate-gradient-x animate-gradient-x text-white shadow-lg h-14 border-b border-emerald-400'
-            >
-               <div className='flex justify-self-start ml-12'>
-                  <button
-                     className='text-white font-normal text-md xl:font-medium xl:text-md my-2 py-2 px-4 size-xl rounded-md transition btn btn-ghost hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] hover:ring-2 ring-teal-300 focus:outline-none focus:ring-1 focus:ring-blue-300'
-                     onClick={() => navigate('/#projects')}
-                  >
-                     Return to Home
-                  </button>
+      <div className='bg-gradient-to-b from-[#0A1630] via-[#0F1E40] to-[#122C50] min-h-full'>
+         {/* Navbar for Project */}
+         <nav className='fixed w-full backdrop-blur-md text-white shadow-lg h-24 border-b border-emerald-400 z-50 justify-center items-center'>
+            <div className='flex ml-7 mt-5'>
+               <button
+                  className='text-green-500 font-normal text-md xl:font-medium xl:text-md my-2 py-1 px-3 mr-5 size-lg rounded-md transition btn border-t-cyan-500 hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] ring-2 ring-teal-300 focus:outline-none focus:ring-1 focus:ring-blue-300'
+                  onClick={() => navigate('/#projects')}
+               >
+                  Home
+               </button>
+               <div className='w-full bg-transparent backdrop-blur-md flex flex-col items-center'>
+                  <h1 className='text-5xl font-bold text-white text-outline-black'>
+                     {project.name}
+                  </h1>
                </div>
-            </nav>
+               <a href={project.link}>
+                  <img
+                     src='/assets/share2.png'
+                     alt=''
+                     className='w-10 h-10 mr-7 mt-2'
+                  />
+               </a>
+            </div>
+         </nav>
 
-            {/* Project Content */}
-            <section>
-               <div className='pt-20 mx-5 max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8'>
-                  <div className='grid grid-cols-1 gap-4 md:grid-cols-4 md:items-center md:gap-8'>
-                     <div className='md:col-span-1'>
-                        <div className='max-w-lg md:max-w-none'>
-                           <h2 className='text-2xl font-semibold text-blue-400 sm:text-3xl'>
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit.
-                           </h2>
+         {/* Project Content */}
 
-                           <p className='mt-4 text-white'>
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Tenetur doloremque saepe architecto maiores
-                              repudiandae amet perferendis repellendus,
-                              reprehenderit voluptas sequi.
-                           </p>
-                        </div>
+         <div className='pt-20 mx-5 bg-transparent min-h-screen min-w-screen'>
+            {/* Project Title  */}
+            {/* <div className='w-full bg-transparent backdrop-blur-md flex flex-col items-center'>
+               <h1 className='text-4xl font-bold mb-5 text-white'>
+                  {project.name}
+               </h1>
+               <NeonGradientDivider />
+            </div> */}
+
+            {/* for main content , all 3 divs in row */}
+            <div className='relative w-full bg-transparent flex justify-between mt-20 z-20'>
+               {/* Left Button (Previous) */}
+
+               <div className=' bg-trasnparent w-24 h-auto'>
+                  {/* {projects.findIndex((p) => p.id === parseInt(id)) > 0 && (
+                     <div className='fixed left-5 top-1/2 transform -translate-y-1/2 bg-pink-600'>
+                        <button
+                           onClick={() => {
+                              const currentIndex = projects.findIndex(
+                                 (p) => p.id === parseInt(id)
+                              )
+                              const prevIndex =
+                                 (currentIndex - 1 + projects.length) %
+                                 projects.length
+                              navigate(`/project/${projects[prevIndex].id}`)
+                           }}
+                           className=' text-white bg-cyan-900 rounded-none p-3 size-lg hover:bg-gray-700 shadow-lg'
+                        >
+                           ←
+                        </button>
                      </div>
-
-                     <div className='md:col-span-3'>
+                  )} */}
+                  <div className='fixed left-5 top-1/2 transform -translate-y-50 bg-transparent'>
+                     <button
+                        onClick={() => {
+                           const currentIndex = projects.findIndex(
+                              (p) => p.id === parseInt(id)
+                           )
+                           const prevIndex =
+                              (currentIndex - 1 + projects.length) %
+                              projects.length // Calculate previous index cyclically
+                           navigate(`/project/${projects[prevIndex].id}`) // Navigate to the previous project
+                        }}
+                        className='text-white bg-transparent rounded-none p-3 size-lg hover:bg-gray-700 shadow-lg'
+                     >
+                        {/* ← */}
                         <img
-                           src='https://images.unsplash.com/photo-1731690415686-e68f78e2b5bd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                           className='rounded border-2 border-green-500'
+                           src='/assets/left-arrow.png'
                            alt=''
+                           className='h-10 w-10'
                         />
-                     </div>
+                     </button>
                   </div>
                </div>
-            </section>
+
+               {/* Description  */}
+               <div className='fixed w-96 h-auto ml-24'>
+                  <p className='mb-6 text-white'>{project.description}</p>
+                  <ul className='list-disc list-inside text-cyan-400 space-y-2'>
+                     <h1>Features:</h1>
+                     {project.features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                     ))}
+                  </ul>
+               </div>
+
+               {/* Images */}
+               <div className='xl:flex-1 flex-shrink-0 ml-[26rem] bg-transparent w-24 h-auto mb-10'>
+                  <div className='flex flex-col gap-10 items-center p-2'>
+                     {/* <div className='flex-1 ml-[26rem] mr-24 flex flex-col gap-10 items-center'> */}
+                     {project.media.map((media, index) => (
+                        <div
+                           key={index}
+                           className='snap-start flex-none w-full h-full bg-gray-700 rounded-lg overflow-hidden shadow-[0_0_10px_5px_rgba(0,255,255,0.5)]'
+                        >
+                           {media.type === 'image' ? (
+                              <img
+                                 src={media.url}
+                                 alt={`Media ${index}`}
+                                 className='object-cover w-full h-full'
+                              />
+                           ) : (
+                              <video
+                                 controls
+                                 autoPlay
+                                 muted
+                                 loop
+                                 src={media.url}
+                                 className='object-cover w-full h-full'
+                              />
+                           )}
+                        </div>
+                     ))}
+                  </div>
+               </div>
+
+               {/* Next Button  */}
+               <div className='bg-trasnparent w-24 h-auto'>
+                  <button
+                     onClick={nextProject}
+                     className='fixed top-1/2 -translate-y-50 right-5 text-white bg-transparent rounded-none p-3 size-lg hover:bg-gray-700 shadow-lg'
+                  >
+                     {/* → */}
+                     <img
+                        src='/assets/right-arrow.png'
+                        alt=''
+                        className='h-10 w-10'
+                     />
+                  </button>
+               </div>
+            </div>
          </div>
-      </>
+      </div>
    )
 }
+
+// import { useParams, useNavigate } from 'react-router-dom'
+// import NeonGradientDivider from '../design/designComponents/NeonGradientDivider'
+
+// const Project = ({ projects }) => {
+//    const { id } = useParams() // Extract project ID from URL
+//    const navigate = useNavigate()
+
+//    const project = projects.find((p) => p.id === parseInt(id)) // Find project by ID
+
+//    if (!project) return <div>Project not found!</div> // Handle invalid project ID
+
+//    const nextProject = () => {
+//       const currentIndex = projects.findIndex((p) => p.id === parseInt(id))
+//       const nextIndex = (currentIndex + 1) % projects.length // Loop to the first project if on the last
+//       navigate(`/project/${projects[nextIndex].id}`)
+//    }
+
+//    return (
+
+//    )
+
+// }
 export default Project

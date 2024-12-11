@@ -5,6 +5,7 @@ import Quotes from './Quotes'
 import Navbar from './Navbar'
 import CustomCursor from '../design/designComponents/CustomCursor'
 import { useEffect } from 'react'
+import { projects } from '../data/ProjectsData'
 
 function Home() {
    useEffect(() => {
@@ -44,47 +45,17 @@ function Home() {
                      PROJECTS
                   </h1>
                   <div className='flex flex-row justify-evenly flex-wrap gap-y-10'>
-                     <Projects
-                        // imageSrc='/assets/1.jpg'
-                        images={[
-                           '/assets/hmp/1.jpg',
-                           '/assets/hmp/2.jpg',
-                           '/assets/hmp/3.jpg',
-                        ]}
-                        title='HouseMarketPlace'
-                        description=' Its a responsive web application based on react, here a user can create a account then upload his properties for rent or sale.'
-                        link='https://house-marketplace-app-kohl.vercel.app/'
-                     />
-                     <Projects
-                        images={['/assets/ghf/1.jpg', '/assets/ghf/2.png']}
-                        title='Github Finder'
-                        description='Its a react based Responsive Web application ( for Mobile + Desktop ) which uses local storage to save your tasks ( for persistence ).'
-                        link='https://github-finder-app-mocha-seven.vercel.app/'
-                     />
-                     <Projects
-                        images={['/assets/tda/1.jpg', '/assets/tda/2.jpg']}
-                        title='To-Do App'
-                        description=' Its a React based project, in which we can search any Github profiles and see all their details with repositories.'
-                        link='https://to-do-app-localstorage.vercel.app/'
-                     />
-                     <Projects
-                        images={['/assets/si.jpg']}
-                        title='Sample Project1'
-                        description=' Its a React based project, in which we can search any Github profiles and see all their details with repositories.'
-                        link='https://to-do-app-localstorage.vercel.app/'
-                     />
-                     <Projects
-                        images={[]}
-                        title='Sample Project2'
-                        description=' Its a React based project, in which we can search any Github profiles and see all their details with repositories.'
-                        link='https://to-do-app-localstorage.vercel.app/'
-                     />
-                     <Projects
-                        images={['/assets/si.jpg']}
-                        title='SampleProject3'
-                        description=' Its a React based project, in which we can search any Github profiles and see all their details with repositories.'
-                        link='https://to-do-app-localstorage.vercel.app/'
-                     />
+                     {projects.map((project) => (
+                        <Projects
+                           images={project.media
+                              .filter((item) => item.type === 'image')
+                              .map((item) => item.url)}
+                           title={project.name}
+                           description={project.description}
+                           link={project.link}
+                           id={project.id}
+                        />
+                     ))}
                   </div>
                </div>
 

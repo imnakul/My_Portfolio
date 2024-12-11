@@ -42,3 +42,6 @@ a {
    animation: gradient-x 4s linear infinite;
 }
 
+.text-outline-black {
+   text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black;
+ }
