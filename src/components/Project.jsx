@@ -27,7 +27,7 @@ const Project = ({ projects }) => {
             <h1 className='text-2xl md:text-5xl font-bold text-white text-center text-outline-black'>
                {project.name}
             </h1>
-            <a href={project.link}>
+            <a href={project.link} target='_blank'>
                <img
                   src='/assets/maximize.png'
                   alt='Open'
