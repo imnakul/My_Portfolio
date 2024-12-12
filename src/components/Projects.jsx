@@ -39,7 +39,7 @@ const Projects = ({ images, title, description, link, id }) => {
          {/* max-w-xs xl:max-w-9 h-auto mx-auto //working very good - 3 columns in medium font-perfect, wide for picture + plenty space around as well */}
          {/* max-w-xs xl:size-auto h-auto mx-7 //working very good - 4 columns little open, change mx-8 for 3 columns only but then too slim - but no image proper*/}
 
-         <div className='max-w-xs xl:max-w-96 h-auto mx-7 bg-trasparent rounded-md overflow-hidden transition-transform duration-300 xl:hover:scale-105 xl:hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] xl:border border-cyan-400 z-20 shadow-[0_0_10px_8px_rgba(0,255,255,0.5)] xl:shadow-none'>
+         <div className='flex flex-col max-w-xs xl:max-w-96 h-auto mx-7 bg-trasparent rounded-md overflow-hidden transition-transform duration-300 xl:hover:scale-110 xl:hover:shadow-[0_0_20px_10px_rgba(0,255,255,0.5)] xl:border border-cyan-400 z-20 shadow-[0_0_10px_8px_rgba(0,255,255,0.5)] xl:shadow-none'>
             {/* green glow+border: */}
             {/* hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.6)] border border-green-400 */}
             {/* Cyan glow+border: */}
@@ -84,15 +84,15 @@ const Projects = ({ images, title, description, link, id }) => {
             )}
 
             {/* ContentBelowImage in ProjectCard */}
-            <div className='p-4 flex flex-col justify-between'>
+            <div className='p-2 flex flex-col justify-between'>
                <h2 className='text-xl font-semibold self-center text-white'>
                   {title}
                </h2>
-               <p className='text-pink-400 font-albert-sans mt-2'>
+               <p className='text-pink-400 font-albert-sans text-center mt-2 mx-2'>
                   {description}
                </p>
 
-               {/* Visit Link Button */}
+               {/* Visit Info & Link Button */}
                <div className='flex justify-between font-playwrite-hr font-normal xl:font-semibold'>
                   <a
                      href='#'
@@ -102,7 +102,7 @@ const Projects = ({ images, title, description, link, id }) => {
                      }}
                      rel='noopener noreferrer'
                      // className='xl:w-32 xl:h-12 w-28 h-10 inline-flex items-center justify-start py-1 pl-1 xl:pl-2 mt-4 mb-2 text-green-50 bg-emerald-400 rounded-md transform transition-all duration-300 xl:animate-bounce animate-bounce border border-cyan-400 hover:text-cyan-300 text-sm xl:text-base'
-                     className='inline-flex items-center justify-start pl-1 xl:pl-2 mt-4 mb-2 mr-2'
+                     className='inline-flex items-center justify-start pl-1 xl:pl-2 mt-2 mb-2 mr-2'
                   >
                      <img
                         src='/assets/information.png'

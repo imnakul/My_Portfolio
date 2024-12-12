@@ -225,7 +225,7 @@ const AboutSection = () => {
                   <div className='flex flex-col xl:flex-row justify-between items-center h-full'>
                      {/* Text Content */}
                      <div className='flex-1 xl:pr-10 pr-2'>
-                        <h2 className='text:5xl xl:text-7xl font-bold text-cyan-300 mb-2 xl:mb-4 font-serif'>
+                        <h2 className='text:5xl xl:text-7xl text-cyan-300 mb-2 xl:mb-4 font-audiowide'>
                            Hi, I'm Nakul
                         </h2>
                         <p className='text-white font-mono text-xs xl:text-lg mb-2 xl:mb-2'>
