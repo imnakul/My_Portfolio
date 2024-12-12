@@ -39,7 +39,7 @@ const Projects = ({ images, title, description, link, id }) => {
          {/* max-w-xs xl:max-w-9 h-auto mx-auto //working very good - 3 columns in medium font-perfect, wide for picture + plenty space around as well */}
          {/* max-w-xs xl:size-auto h-auto mx-7 //working very good - 4 columns little open, change mx-8 for 3 columns only but then too slim - but no image proper*/}
 
-         <div className='max-w-xs xl:max-w-96 h-auto mx-7 bg-trasparent rounded-md overflow-hidden transition-transform duration-300 xl:hover:scale-105 xl:hover:shadow-[0_0_20px_10px_rgba(0,255,255,0.5)] xl:border border-cyan-400 z-20 xl:hover:border-hidden shadow-[0_0_10px_8px_rgba(0,255,255,0.5)] xl:shadow-none'>
+         <div className='max-w-xs xl:max-w-96 h-auto mx-7 bg-trasparent rounded-md overflow-hidden transition-transform duration-300 xl:hover:scale-105 xl:hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] xl:border border-cyan-400 z-20 shadow-[0_0_10px_8px_rgba(0,255,255,0.5)] xl:shadow-none'>
             {/* green glow+border: */}
             {/* hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.6)] border border-green-400 */}
             {/* Cyan glow+border: */}
@@ -105,9 +105,9 @@ const Projects = ({ images, title, description, link, id }) => {
                      className='inline-flex items-center justify-start pl-1 xl:pl-2 mt-4 mb-2 mr-2'
                   >
                      <img
-                        src='/assets/info.png'
+                        src='/assets/information.png'
                         alt=''
-                        className='w-10 h-10 hover:animate-spin'
+                        className='w-10 h-10 hover:animate-spin hover:rounded-full hover:shadow-[0_0_10px_5px_rgba(0,255,255,0.5)]'
                      />
                   </a>
 
@@ -119,9 +119,9 @@ const Projects = ({ images, title, description, link, id }) => {
                      className='inline-flex items-center justify-start pl-1 xl:pl-2 mt-4 mb-2 mr-2'
                   >
                      <img
-                        src='/assets/share2.png'
+                        src='/assets/linkforproject.png'
                         alt=''
-                        className='w-9 h-9 hover:animate-pulse'
+                        className='w-10 h-10 hover:animate-spin hover:rounded-full hover:shadow-[0_0_10px_5px_rgba(0,255,255,0.5)]'
                      />
                   </a>
                </div>

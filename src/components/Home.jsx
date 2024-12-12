@@ -34,14 +34,14 @@ function Home() {
                <Navbar />
 
                {/* Sections */}
-               <div id='about' className='xl:pt-6'>
+               <div id='about' className='md:pt-6'>
                   <About />
                </div>
 
                <Quotes />
 
                <div id='projects' className='pt-11 flex flex-col'>
-                  <h1 className='text-4xl text-white xl:text-5xl font-bold m-9 xl:m-12 font-sans hover:text-cyan-400 self-center '>
+                  <h1 className='text-4xl text-white md:text-5xl font-bold m-9 md:m-12 font-sans hover:text-cyan-400 self-center '>
                      PROJECTS
                   </h1>
                   <div className='flex flex-row justify-evenly flex-wrap gap-y-10'>
