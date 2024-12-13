@@ -47,6 +47,7 @@ function Home() {
                   <div className='flex flex-row justify-evenly flex-wrap gap-y-10'>
                      {projects.map((project) => (
                         <Projects
+                           key={project.id}
                            images={project.media
                               .filter((item) => item.type === 'image')
                               .map((item) => item.url)}

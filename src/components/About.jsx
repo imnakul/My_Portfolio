@@ -202,6 +202,7 @@
 // export default About
 
 import React, { useState } from 'react'
+import { Typewriter } from 'react-simple-typewriter'
 
 const AboutSection = () => {
    const [expanded, setExpanded] = useState(false)
@@ -226,13 +227,27 @@ const AboutSection = () => {
                      {/* Text Content */}
                      <div className='flex-1 xl:pr-10 pr-2'>
                         <h2 className='text:5xl xl:text-7xl text-cyan-300 mb-2 xl:mb-4 font-audiowide'>
-                           Hi, I'm Nakul
+                           <Typewriter
+                              words={["Hi, I'm Nakul"]}
+                              typeSpeed={1}
+                              deleteSpeed={0} // Prevent deletion
+                              loop={1} // Do not loop
+                              cursor={false} // Show the blinking cursor
+                              cursorStyle='_' // Customize the cursor (optional)
+                           />
                         </h2>
+
                         <p className='text-white font-mono text-xs xl:text-lg mb-2 xl:mb-2'>
-                           A passionate web developer who loves creating
-                           innovative, user-friendly applications. With a knack
-                           for solving real-world problems, I focus on bringing
-                           creative ideas to life.
+                           <Typewriter
+                              words={[
+                                 'A passionate web developer who loves creating innovative, user-friendly applications. With a knack for solving real-world problems, I focus on bringing creative ideas to life.',
+                              ]}
+                              typeSpeed={1}
+                              deleteSpeed={0} // Prevent deletion
+                              loop={1} // Do not loop
+                              cursor={true} // Show the blinking cursor
+                              cursorStyle='_' // Customize the cursor (optional)
+                           />
                         </p>
 
                         {/* Skills and Connect Section */}
