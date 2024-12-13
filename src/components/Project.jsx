@@ -60,15 +60,15 @@ const Project = ({ projects }) => {
             </div>
 
             {/* Project Description */}
-            <div className='flex flex-col items-center md:items-start md:mt-7 md:ml-16 md:w-1/3 '>
-               <p className='text-white text-center md:text-left mb-4 font-albert-sans font-semibold'>
+            <div className='flex flex-col items-center md:items-start md:mt-8 md:ml-16 md:w-1/3'>
+               <p className='xl:fixed max-w-md text-white text-center md:text-left mb-4 font-albert-sans font-semibold'>
                   {' '}
                   <b className='font-aclonica text-blue-50 font-extralight'>
                      Description :{' '}
                   </b>
                   {project.description}
                </p>
-               <ul className='list-disc list-inside text-cyan-400 space-y-2'>
+               <ul className='xl:fixed list-disc list-inside text-cyan-400 space-y-2 xl:mt-24'>
                   <b className='font-extralight text-blue-50 font-aclonica'>
                      Features :
                   </b>

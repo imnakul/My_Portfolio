@@ -254,8 +254,8 @@ const AboutSection = () => {
                         <div className='flex flex-0 justify-between items-center mt-6 xl:mt-6 xl:ml-6 ml-0'>
                            {/* Skills */}
                            <div className='flex flex-col items-center'>
-                              <h3 className='text-cyan-300 font-normal text-md xl:text-xl xl:mb-4 mb-2 items-center'>
-                                 <button className='bg-cyan-300 text-black font-albert-sans px-1 py-0 border-2 border-cyan-400 rounded-sm shadow-md hover:opacity-60 transition duration-300'>
+                              <h3 className='text-cyan-300 font-normal text-md xl:text-xl xl:mb-4 mb-3 items-center'>
+                                 <button className='bg-cyan-300 text-teal-950 font-albert-sans px-1 py-0 border-2 border-cyan-400 rounded-md shadow-md hover:opacity-60 transition duration-300'>
                                     Skills
                                  </button>
                               </h3>
@@ -290,7 +290,7 @@ const AboutSection = () => {
 
                            {/* Connect */}
                            <div className='flex flex-1 flex-col items-center mb-6 ml-0'>
-                              <button className='bg-cyan-300 text-black font-albert-sans text-md xl:text-xl xl:mb-4 mb-2 px-1 py-0 border-2 border-cyan-400 rounded-sm shadow-md hover:opacity-60 transition duration-300'>
+                              <button className='bg-cyan-300 text-teal-950 font-albert-sans text-md xl:text-xl xl:mb-4 mb-3 px-1 py-0 border-2 border-cyan-400 rounded-md shadow-md hover:opacity-60 transition duration-300'>
                                  Connect
                               </button>
                               <a

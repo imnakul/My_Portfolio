@@ -64,9 +64,7 @@ const QuoteSection = () => {
          {/* text-shadow */}
          {/* bg-gradient-to-r from-blue-900 to-purple-900   */}
          {/* bg-gradient-to-r from-purple-950 via-gray-900 to-purple-950 animate-gradient-x */}
-         {quote}
-
-         {/* Copy Button */}
+         " {quote}"{/* Copy Button */}
          <button
             onClick={handleCopy}
             className='absolute bottom-2 right-2 bg-transparent hover:opacity-70 text-white p-0 mb-1 rounded-full shadow-lg focus:outline-none border-1 border-black'
@@ -74,7 +72,6 @@ const QuoteSection = () => {
          >
             <img src='assets/copy2.png' alt='copyIcon' className='w-4 h-4' />
          </button>
-
          {/* Copied Popup */}
          {copied && (
             <div className='absolute top-16 right-2 bg-white text-black text-xs px-2 py-2 rounded-md shadow-md'>
