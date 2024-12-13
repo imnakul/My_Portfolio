@@ -1,7 +1,7 @@
 export const projects = [
    {
       id: 1,
-      name: 'House Marketplace - SELL or RENT',
+      name: 'House Marketplace - SELL / RENT',
       link: 'https://house-marketplace-app-kohl.vercel.app',
       description:
          'A web application where users can list properties for sale or rent, featuring Google authentication, Firebase integration, and a map view.',

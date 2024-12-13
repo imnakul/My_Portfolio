@@ -12,6 +12,7 @@ export default {
             podkova: ['"Podkova"', 'serif'],
             audiowide: ['"Audiowide"', 'system-ui'],
             galada: ['Galada', 'system-ui'],
+            aclonica: ['"Aclonica"', 'sans-serif'],
          },
          fontWeight: {
             'extra-light': 100, // Add specific font weight if needed
@@ -32,10 +33,11 @@ export default {
             staticrainbow: {
                '100%': {
                   background:
-                     'linear-gradient(to right, red, orange, yellow, green)',
+                     'linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(255, 165, 0, 0.9), rgba(255, 255, 0, 0.9), rgba(0, 128, 0, 0.9))',
                },
                '0%': {
-                  background: 'linear-gradient(to right, cyan,yellow, green)',
+                  background:
+                     'linear-gradient(to right, rgba(0, 255, 255, 0.8), rgba(255, 255, 0, 0.8), rgba(0, 128, 0, 0.8))',
                },
             },
             rainbow: {

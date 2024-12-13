@@ -24,7 +24,7 @@ const Project = ({ projects }) => {
                   className='w-8 h-8 md:w-9 md:h-9 hover:rounded-xl hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] md:ml-3'
                />
             </button>
-            <h1 className='text-2xl md:text-5xl font-bold text-white text-center text-outline-black'>
+            <h1 className='text-2xl md:text-5xl font-bold text-white font-audiowide text-center text-outline-black'>
                {project.name}
             </h1>
             <a href={project.link} target='_blank'>
@@ -62,12 +62,16 @@ const Project = ({ projects }) => {
             {/* Project Description */}
             <div className='flex flex-col items-center md:items-start md:mt-7 md:ml-16 md:w-1/3 '>
                <p className='text-white text-center md:text-left mb-4'>
+                  {' '}
+                  <b className='font-aclonica text-blue-50 font-extralight'>
+                     Description :{' '}
+                  </b>
                   {project.description}
                </p>
                <ul className='list-disc list-inside text-cyan-400 space-y-2'>
-                  <h1 className='text-lg md:text-xl font-semibold'>
-                     Features:
-                  </h1>
+                  <b className='font-extralight text-blue-50 font-aclonica'>
+                     Features :
+                  </b>
                   {project.features.map((feature, index) => (
                      <li key={index}>{feature}</li>
                   ))}

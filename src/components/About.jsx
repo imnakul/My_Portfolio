@@ -226,10 +226,10 @@ const AboutSection = () => {
                   <div className='flex flex-col xl:flex-row justify-between items-center h-full'>
                      {/* Text Content */}
                      <div className='flex-1 xl:pr-10 pr-2'>
-                        <h2 className='text:5xl xl:text-7xl text-cyan-300 mb-2 xl:mb-4 font-audiowide'>
+                        <h2 className='text-3xl xl:text-7xl text-cyan-300 mb-2 xl:mb-4 font-audiowide'>
                            <Typewriter
                               words={["Hi, I'm Nakul"]}
-                              typeSpeed={1}
+                              typeSpeed={50}
                               deleteSpeed={0} // Prevent deletion
                               loop={1} // Do not loop
                               cursor={false} // Show the blinking cursor
@@ -237,12 +237,12 @@ const AboutSection = () => {
                            />
                         </h2>
 
-                        <p className='text-white font-mono text-xs xl:text-lg mb-2 xl:mb-2'>
+                        <p className='text-white font-mono text-sm xl:text-lg mb-2 xl:mb-2'>
                            <Typewriter
                               words={[
                                  'A passionate web developer who loves creating innovative, user-friendly applications. With a knack for solving real-world problems, I focus on bringing creative ideas to life.',
                               ]}
-                              typeSpeed={1}
+                              typeSpeed={10}
                               deleteSpeed={0} // Prevent deletion
                               loop={1} // Do not loop
                               cursor={true} // Show the blinking cursor
@@ -254,8 +254,10 @@ const AboutSection = () => {
                         <div className='flex flex-0 justify-between items-center mt-6 xl:mt-6 xl:ml-6 ml-0'>
                            {/* Skills */}
                            <div className='flex flex-col items-center'>
-                              <h3 className='text-cyan-300 font-normal text-md xl:text-2xl xl:mb-4 mb-2 items-center'>
-                                 Skills
+                              <h3 className='text-cyan-300 font-normal text-md xl:text-xl xl:mb-4 mb-2 items-center'>
+                                 <button className='bg-cyan-300 text-black font-albert-sans px-1 py-0 border-2 border-cyan-400 rounded-sm shadow-md hover:opacity-60 transition duration-300'>
+                                    Skills
+                                 </button>
                               </h3>
                               <div className='grid grid-cols-5 gap-1 xl:gap-6 mr-2 mb-6'>
                                  <img
@@ -288,9 +290,9 @@ const AboutSection = () => {
 
                            {/* Connect */}
                            <div className='flex flex-1 flex-col items-center mb-6 ml-0'>
-                              <h3 className='text-cyan-300 font-normal text-md xl:text-2xl xl:mb-4 mb-2'>
+                              <button className='bg-cyan-300 text-black font-albert-sans text-md xl:text-xl xl:mb-4 mb-2 px-1 py-0 border-2 border-cyan-400 rounded-sm shadow-md hover:opacity-60 transition duration-300'>
                                  Connect
-                              </h3>
+                              </button>
                               <a
                                  href='https://www.linkedin.com/in/nakul-srivastava-a8426033b/'
                                  target='_blank'
@@ -319,7 +321,7 @@ const AboutSection = () => {
                </>
             ) : (
                <>
-                  {/* Collapsed Circular Shape */}
+                  {/* Collapsed Shape */}
                   <div className='flex justify-center items-center'>
                      <div className='w-40 h-40 flex items-center justify-center cursor-pointer shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] xl:shadow-none xl:hover:shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] transition-all duration-1000 text-cyan-300 border-2 border-cyan-400 overflow-hidden'>
                         <img

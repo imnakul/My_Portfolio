@@ -85,10 +85,10 @@ const Projects = ({ images, title, description, link, id }) => {
 
             {/* ContentBelowImage in ProjectCard */}
             <div className='p-2 flex flex-col justify-between'>
-               <h2 className='text-xl font-semibold self-center text-white'>
+               <h2 className='xl:text-xl text-md font-medium font-aclonica self-center text-white mt-1'>
                   {title}
                </h2>
-               <p className='text-pink-400 font-albert-sans text-center mt-2 mx-2'>
+               <p className='text-pink-400 font-albert-sans text-center text-sm xl:text-md mt-2 mx-2'>
                   {description}
                </p>
 
