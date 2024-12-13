@@ -61,7 +61,7 @@ const Project = ({ projects }) => {
 
             {/* Project Description */}
             <div className='flex flex-col items-center md:items-start md:mt-7 md:ml-16 md:w-1/3 '>
-               <p className='text-white text-center md:text-left mb-4'>
+               <p className='text-white text-center md:text-left mb-4 font-albert-sans font-semibold'>
                   {' '}
                   <b className='font-aclonica text-blue-50 font-extralight'>
                      Description :{' '}
