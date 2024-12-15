@@ -4,14 +4,9 @@ import About from './About'
 import Quotes from './Quotes'
 import Navbar from './Navbar'
 import CustomCursor from '../design/designComponents/CustomCursor'
-import { useEffect, useState } from 'react'
 import { projects } from '../data/ProjectsData'
 
 function Home() {
-   const [backgroundClass, setBackgroundClass] = useState(
-      "bg-[url('/assets/bg3.jpg')] min-h-screen"
-   )
-
    // const themes = [
    //    {
    //       label: 'Black-Blue - in deployment right now',
@@ -40,26 +35,9 @@ function Home() {
    // ]
    // {themes.map((theme, index) => (setBackgroundClass(theme.class)))}
 
-   useEffect(() => {
-      // Scroll to the section if there's a hash in the URL
-      const hash = window.location.hash
-      if (hash) {
-         const section = document.querySelector(hash)
-         if (section) {
-            section.scrollIntoView({ behavior: 'auto' })
-
-            // Remove the hash from the URL after scrolling
-            window.history.replaceState(
-               {},
-               document.title,
-               window.location.pathname
-            )
-         }
-      }
-   }, [])
    return (
       <>
-         <div className={`${backgroundClass}`}>
+         <div className='bg-gradient-to-b from-[#0A1630] via-[#0F1E40] to-[#122C50] min-h-screen'>
             <CustomCursor />
             <div className='flex flex-col'>
                <Navbar />
