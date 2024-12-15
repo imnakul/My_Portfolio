@@ -9,7 +9,7 @@ import { projects } from '../data/ProjectsData'
 
 function Home() {
    const [backgroundClass, setBackgroundClass] = useState(
-      "bg-[url('/assets/bg3.jpg')] min-h-screen bg-cover"
+      "bg-[url('/assets/bg3.jpg')] min-h-screen"
    )
 
    // const themes = [

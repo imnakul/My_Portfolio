@@ -229,7 +229,7 @@ const AboutSection = () => {
                         <h2 className='text-3xl xl:text-7xl text-cyan-300 mb-2 xl:mb-4 font-audiowide'>
                            <Typewriter
                               words={["Hi, I'm Nakul"]}
-                              typeSpeed={60}
+                              typeSpeed={20}
                               deleteSpeed={0} // Prevent deletion
                               loop={1} // Do not loop
                               cursor={false} // Show the blinking cursor
@@ -242,7 +242,7 @@ const AboutSection = () => {
                               words={[
                                  'A passionate web developer who loves creating innovative, user-friendly applications. With a knack for solving real-world problems, I focus on bringing creative ideas to life.',
                               ]}
-                              typeSpeed={25}
+                              typeSpeed={20}
                               deleteSpeed={0} // Prevent deletion
                               loop={1} // Do not loop
                               cursor={true} // Show the blinking cursor
