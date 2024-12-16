@@ -1,11 +1,11 @@
 export const projects = [
    {
       id: 1,
-      name: 'House Marketplace - SELL / RENT',
+      name: 'House Marketplace',
       link: 'https://house-marketplace-app-kohl.vercel.app',
       description:
          'A web application where users can list properties for sale or rent, featuring Google authentication, Firebase integration, and a map view.',
-      features: [
+      highlights: [
          'Google authentication',
          'Firebase database',
          'Edit properties after uploading',
@@ -14,6 +14,12 @@ export const projects = [
          'Carousel gallery view',
          'Separate pages for rent and sale properties',
          'Offer system for properties',
+      ],
+      features: [
+         'Responsive Web Application to list your property for rent / sale',
+         'User can create account, look, and upload properties details',
+         'Authentication & Database using firebase',
+         'Used Fire-Store to save images and property details',
       ],
       media: [
          { type: 'video', url: '/assets/hmp/4.mp4' },
@@ -28,7 +34,10 @@ export const projects = [
       link: 'https://github-finder-app-mocha-seven.vercel.app/',
       description:
          'Its a React based project, in which we can search any Github profiles and see all its details...',
-      features: ['Can visit their repositories also', 'used Context API'],
+      features: [
+         'Web Application which fetches users & their details using GitHub API',
+         'Made user Interface to view repositories and other details',
+      ],
       media: [
          { type: 'image', url: '/assets/ghf/1.jpg' },
          { type: 'image', url: '/assets/ghf/2.png' },

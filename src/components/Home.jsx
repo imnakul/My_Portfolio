@@ -33,11 +33,10 @@ function Home() {
    //       class: "bg-[url('/assets/bg.jpg')] min-h-screen bg-cover bg-center",
    //    },
    // ]
-   // {themes.map((theme, index) => (setBackgroundClass(theme.class)))}
 
    return (
       <>
-         <div className='bg-gradient-to-b from-[#0A1630] via-[#0F1E40] to-[#122C50] min-h-screen'>
+         <div className="bg-[url('/assets/bg1.jpg')] min-h-screen bg-cover bg-center">
             <CustomCursor />
             <div className='flex flex-col'>
                <Navbar />

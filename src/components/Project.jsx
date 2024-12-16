@@ -39,7 +39,7 @@ const Project = ({ projects }) => {
          {/* Main Content */}
          <div className='pt-24 px-4 md:px-10 bg-transparent flex flex-col md:flex-row md:gap-5'>
             {/* Left Button */}
-            <div className='fixed md:left-5 left-1 top-1/2 transform -translate-y-1/2 md:translate-y-50'>
+            <div className='fixed md:left-4 left-1 top-1/2 transform -translate-y-1/2 md:translate-y-50'>
                <button
                   onClick={() => {
                      const currentIndex = projects.findIndex(
@@ -60,7 +60,7 @@ const Project = ({ projects }) => {
             </div>
 
             {/* Project Description */}
-            <div className='flex flex-col items-center md:items-start md:mt-8 md:ml-16 md:w-1/3 font-albert-sans'>
+            <div className='flex flex-col items-center md:items-start md:mt-8 md:ml-12 md:w-1/3 font-albert-sans'>
                <p className='xl:fixed max-w-md text-white text-center md:text-left mb-4  font-semibold'>
                   {' '}
                   <b className='font-aclonica text-blue-50 font-extralight'>
@@ -68,7 +68,7 @@ const Project = ({ projects }) => {
                   </b>
                   {project.description}
                </p>
-               <ul className='xl:fixed list-disc list-inside text-cyan-300 space-y-2 xl:mt-24'>
+               <ul className='xl:fixed list-disc md:max-w-md  max-w-xs list-inside text-cyan-300 space-y-2 xl:mt-24'>
                   <b className='font-extralight text-blue-50 font-aclonica'>
                      Features :
                   </b>
@@ -108,7 +108,7 @@ const Project = ({ projects }) => {
             </div>
 
             {/* Right Button */}
-            <div className='fixed md:right-5 right-1 top-1/2 transform -translate-y-1/2 md:translate-y-50'>
+            <div className='fixed md:right-4 right-1 top-1/2 transform -translate-y-1/2 md:translate-y-50'>
                <button
                   onClick={nextProject}
                   className='text-white rounded-none p-2 shadow-lg'

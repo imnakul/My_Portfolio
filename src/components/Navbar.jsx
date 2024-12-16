@@ -41,17 +41,17 @@ function Navbar() {
                </button>
             </div>
 
-            <div className='absolute right-4 xl:mt-1.5 mt-2.5 xl:mx-2 border border-cyan-300 rounded-lg'>
+            <div className='absolute right-4 xl:mt-1.5 mt-2.5 xl:mx-2 shadow-[0_0_4px_1px_rgba(0,255,255,0.6)] rounded-full'>
                <a
                   href='https://github.com/imnakul'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='hover:scale-110 transition-transform'
+                  className=''
                >
                   <img
-                     src='/assets/github.png'
+                     src='/assets/github1.png'
                      alt='LinkedIn'
-                     className='h-8 w-8 md:w-10 md:h-10'
+                     className='h-8 w-8 md:w-10 md:h-10 scale-110 transition-transform'
                   />
                </a>
             </div>

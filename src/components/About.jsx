@@ -323,7 +323,7 @@ const AboutSection = () => {
                <>
                   {/* Collapsed Shape */}
                   <div className='flex justify-center items-center'>
-                     <div className='w-40 h-40 flex items-center justify-center cursor-pointer shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] xl:shadow-none xl:hover:shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] transition-all duration-1000 text-cyan-300 border-2 border-cyan-400 overflow-hidden'>
+                     <div className='w-40 h-40 flex items-center justify-center cursor-pointer shadow-[0_0_10px_5px_rgba(0,255,255,0.6)] xl:shadow-none xl:hover:shadow-[0_0_30px_10px_rgba(0,255,255,0.6)] transition-all duration-1000 text-cyan-300 border-2 border-cyan-400 overflow-hidden'>
                         <img
                            src='/assets/click-here.gif'
                            alt='click Me!'
