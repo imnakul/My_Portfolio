@@ -61,20 +61,27 @@ const Project = ({ projects }) => {
 
             {/* Project Description */}
             <div className='flex flex-col items-center md:items-start md:mt-8 md:ml-12 md:w-1/3 font-albert-sans'>
-               <p className='xl:fixed max-w-md text-white text-center md:text-left mb-4  font-semibold'>
+               <p className='xl:fixed max-w-md text-white text-center md:text-left mb-4 font-semibold'>
                   {' '}
                   <b className='font-aclonica text-blue-50 font-extralight'>
                      Description :{' '}
                   </b>
                   {project.description}
                </p>
-               <ul className='xl:fixed list-disc md:max-w-md  max-w-xs list-inside text-cyan-300 space-y-2 xl:mt-24'>
+               <ul className='xl:fixed list-disc md:max-w-md max-w-xs list-inside text-cyan-300 space-y-2 xl:mt-24'>
                   <b className='font-extralight text-blue-50 font-aclonica'>
                      Features :
                   </b>
                   {project.features.map((feature, index) => (
                      <li key={index}>{feature}</li>
                   ))}
+                  <div class='xl:fixed flex flex-wrap gap-x-1 gap-y-3 md:max-w-md max-w-xs pt-5'>
+                     {project.highlights.map((highlight, index) => (
+                        <span class='max-w-48 truncate whitespace-nowrap bg-green-100 text-green-800 text-md font-medium me-2 px-2.5 py-0.5 rounded dark:bg-white/20 dark:text-cyan-200 border border-green-200 shadow-[0_0_2px_0px_rgba(0,255,0,0.6)]'>
+                           {highlight}
+                        </span>
+                     ))}
+                  </div>
                </ul>
             </div>
 
