@@ -77,7 +77,7 @@ const Project = ({ projects }) => {
                   ))}
                   <div class='xl:fixed flex flex-wrap gap-x-1 gap-y-3 md:max-w-md max-w-xs pt-5'>
                      {project.highlights.map((highlight, index) => (
-                        <span class='max-w-48 truncate whitespace-nowrap bg-green-100 text-green-800 text-md font-medium me-2 px-2.5 py-0.5 rounded dark:bg-white/20 dark:text-cyan-200 border border-green-200 shadow-[0_0_2px_0px_rgba(0,255,0,0.6)]'>
+                        <span class='max-w-48 truncate whitespace-nowrap bg-green-100 text-green-800 xl:text-md text-sm font-medium mr-1 px-2.5 py-0.5 rounded dark:bg-white/20 dark:text-cyan-200 border border-green-200 shadow-[0_0_2px_0px_rgba(0,255,0,0.6)]'>
                            {highlight}
                         </span>
                      ))}
