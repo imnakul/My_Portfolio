@@ -20,21 +20,21 @@ function Navbar() {
 
             <div className='absolute left-40 ml-10 xl:ml-0 xl:left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex gap-4 xl:gap-24 items-center'>
                <button
-                  className='text-white font-normal xl:font-aclonica font-podkova text-lg xl:font-medium xl:text-sm m-2 px-2 py-1 xl:py-2 xl:px-3 mb-2 size-xl rounded-md transition btn btn-ghost hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] hover:ring-2 ring-teal-300 focus:outline-none focus:ring-1 focus:ring-blue-300 text-outline-black'
+                  className='text-cyan-300 font-normal xl:font-aclonica font-podkova text-lg xl:font-medium xl:text-sm m-2 px-2 py-1 xl:py-2 xl:px-3 mb-2 size-xl rounded-md transition btn btn-ghost hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] hover:ring-2 ring-teal-300 focus:outline-none focus:ring-1 focus:ring-blue-300 text-outline-black'
                   onClick={() => scrollToSection('about')}
                >
                   About
                </button>
 
                <button
-                  className='text-white font-normal xl:font-aclonica font-podkova text-lg xl:font-medium xl:text-sm m-2 px-2 py-1 xl:py-2 xl:px-3 mb-2  rounded-md transition btn btn-ghost size-xl hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] hover:ring-2 ring-teal-300 focus:outline-none focus:ring-1 focus:ring-blue-300 text-outline-black'
+                  className='text-cyan-300 font-normal xl:font-aclonica font-podkova text-lg xl:font-medium xl:text-sm m-2 px-2 py-1 xl:py-2 xl:px-3 mb-2  rounded-md transition btn btn-ghost size-xl hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] hover:ring-2 ring-teal-300 focus:outline-none focus:ring-1 focus:ring-blue-300 text-outline-black'
                   onClick={() => scrollToSection('projects')}
                >
                   Projects
                </button>
 
                <button
-                  className='text-white font-normal xl:font-aclonica font-podkova text-lg xl:font-medium xl:text-sm m-2 px-2 py-1 xl:py-2 xl:px-3 mb-2  rounded-md transition btn btn-ghost size-xl hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] hover:ring-2 ring-teal-300 focus:outline-none focus:ring-1 focus:ring-blue-300 text-outline-black'
+                  className='text-cyan-300 font-normal xl:font-aclonica font-podkova text-lg xl:font-medium xl:text-sm m-2 px-2 py-1 xl:py-2 xl:px-3 mb-2  rounded-md transition btn btn-ghost size-xl hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] hover:ring-2 ring-teal-300 focus:outline-none focus:ring-1 focus:ring-blue-300 text-outline-black'
                   onClick={() => scrollToSection('contact')}
                >
                   Contact

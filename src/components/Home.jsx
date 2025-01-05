@@ -49,7 +49,7 @@ function Home() {
                <Quotes />
 
                <div id='projects' className='pt-11 flex flex-col'>
-                  <h1 className='text-4xl font-audiowide text-white md:text-5xl font-bold m-9 md:m-12 hover:text-cyan-400 self-center '>
+                  <h1 className='text-4xl font-audiowide text-cyan-300 md:text-5xl font-bold m-9 md:m-12 hover:text-cyan-400 self-center '>
                      PROJECTS
                   </h1>
                   <div className='flex flex-row justify-evenly flex-wrap gap-y-10'>

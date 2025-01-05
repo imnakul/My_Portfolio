@@ -9,7 +9,8 @@
 h1,
 h5 {
    /* Neon cyan glow */
-   text-shadow: 0px 2px 15px rgba(145, 247, 115, 0.6);
+   /* text-shadow: 0px 2px 15px rgba(145, 247, 115, 0.6); */
+   text-shadow: 0px 2px 15px rgba(48, 142, 235, 0.6);
 }
 
 .text-pink {
@@ -43,5 +44,6 @@ a {
 }
 
 .text-outline-black {
-   text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black;
- }
+   text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black,
+      -1px 1px 2px black;
+}
