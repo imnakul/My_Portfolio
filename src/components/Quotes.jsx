@@ -10,13 +10,12 @@ const QuoteSection = () => {
          const response = await fetch(`https://api.api-ninjas.com/v1/quotes`, {
             method: 'GET',
             headers: {
-               'X-Api-Key': 'ME9KS9zR0sBgCBZPg0dlKg==V5av9c1gpMIJPvUN',
-               // ME9KS9zR0sBgCBZPg0dlKg==V5av9c1gpMIJPvUN
+               'X-Api-Key': import.meta.env.VITE_APININJAS_API,
+
                'Content-Type': 'application/json',
             },
          })
          const data = await response.json()
-         console.log(data)
 
          // Assuming the API response is an array of quotes
          if (data && data.length > 0) {
@@ -41,15 +40,15 @@ const QuoteSection = () => {
    }
 
    useEffect(() => {
-      const observer = new IntersectionObserver((entries) => {
-         if (entries[0].isIntersecting) {
-            fetchQuote()
-         }
-      })
-      if (quoteRef.current) {
-         observer.observe(quoteRef.current)
-      }
-      return () => observer.disconnect()
+      // const observer = new IntersectionObserver((entries) => {
+      //    if (entries[0].isIntersecting) {
+      //       fetchQuote()
+      //    }
+      // })
+      // if (quoteRef.current) {
+      //    observer.observe(quoteRef.current)
+      // }
+      // return () => observer.disconnect()
       fetchQuote()
    }, [])
 
