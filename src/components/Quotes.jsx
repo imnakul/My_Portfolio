@@ -7,19 +7,16 @@ const QuoteSection = () => {
 
    const fetchQuote = async () => {
       try {
-         const category = 'inspirational' // Change category as needed
-         const response = await fetch(
-            `https://api.api-ninjas.com/v1/quotes?category=${category}`,
-            {
-               method: 'GET',
-               headers: {
-                  'X-Api-Key': '+aSb1w8rKyV1bHIzo9rwiw==O5XsatrRBPBWK7wD',
-                  //   +aSb1w8rKyV1bHIzo9rwiw==O5XsatrRBPBWK7wD
-                  'Content-Type': 'application/json',
-               },
-            }
-         )
+         const response = await fetch(`https://api.api-ninjas.com/v1/quotes`, {
+            method: 'GET',
+            headers: {
+               'X-Api-Key': 'ME9KS9zR0sBgCBZPg0dlKg==V5av9c1gpMIJPvUN',
+               // ME9KS9zR0sBgCBZPg0dlKg==V5av9c1gpMIJPvUN
+               'Content-Type': 'application/json',
+            },
+         })
          const data = await response.json()
+         console.log(data)
 
          // Assuming the API response is an array of quotes
          if (data && data.length > 0) {
@@ -44,15 +41,15 @@ const QuoteSection = () => {
    }
 
    useEffect(() => {
-      //   const observer = new IntersectionObserver((entries) => {
-      //      if (entries[0].isIntersecting) {
-      //         fetchQuote()
-      //      }
-      //   })
-      //   if (quoteRef.current) {
-      //      observer.observe(quoteRef.current)
-      //   }
-      //   return () => observer.disconnect()
+      const observer = new IntersectionObserver((entries) => {
+         if (entries[0].isIntersecting) {
+            fetchQuote()
+         }
+      })
+      if (quoteRef.current) {
+         observer.observe(quoteRef.current)
+      }
+      return () => observer.disconnect()
       fetchQuote()
    }, [])
 
