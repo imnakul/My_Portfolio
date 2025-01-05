@@ -66,7 +66,7 @@ const QuoteSection = () => {
             className='absolute bottom-2 right-2 bg-transparent hover:opacity-70 text-white p-0 mb-1 rounded-full shadow-lg focus:outline-none border-1 border-black'
             title='Copy text'
          >
-            <img src='assets/copy2.png' alt='copyIcon' className='w-4 h-4' />
+            <img src='assets/copy.png' alt='copyIcon' className='w-4 h-4' />
          </button>
          {/* Copied Popup */}
          {copied && (
