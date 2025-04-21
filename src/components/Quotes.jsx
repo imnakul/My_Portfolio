@@ -55,7 +55,7 @@ const QuoteSection = () => {
    return (
       <div
          ref={quoteRef}
-         className='relative max-w-xs xl:max-w-2xl text-center text-black text-xl xl:text-2xl font-extra-light font-playwrite-hr mx-auto  rounded-lg shadow-lg px-4 py-2 border-2 border-cyan-300 animate-staticrainbow bg-[length:200%_200%] bg-clip-border drop-shadow-lg pr-10'
+         className='relative max-w-xs xl:max-w-2xl text-center text-black text-xl xl:text-2xl font-extra-light font-playwrite-hr mx-auto  rounded-lg shadow-lg px-4 py-2 border-2 border-cyan-300 animate-rainbow bg-[length:200%_200%] bg-clip-border drop-shadow-lg pr-10'
       >
          {/* text-shadow */}
          {/* bg-gradient-to-r from-blue-900 to-purple-900   */}
@@ -71,7 +71,7 @@ const QuoteSection = () => {
          {/* Copied Popup */}
          {copied && (
             <div className='absolute top-16 right-2 bg-white text-black text-xs px-2 py-2 rounded-md shadow-md'>
-               Quote Copied!
+               Copied!
             </div>
          )}
       </div>

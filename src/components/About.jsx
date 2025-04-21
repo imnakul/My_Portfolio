@@ -312,7 +312,7 @@ const AboutSection = () => {
                      {/* Image */}
                      <div className='relative self-center w-36 h-36 xl:w-[250px] xl:h-[250px] bg-gradient-to-b from-[#122C50] to-[#0A1630] rounded-full overflow-hidden xl:overflow-hidden shadow-lg border-4 border-cyan-400'>
                         <img
-                           src='/assets/pic2.png'
+                           src='/assets/profile.png'
                            alt='profilepicture'
                            className='absolute w-[150%] h-auto -top-[7%] left-1/2 transform xl:-translate-x-32 -translate-x-[76px] transition-transform duration-1000 ease-in-out hover:opacity-70'
                         />
