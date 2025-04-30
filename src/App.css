@@ -47,3 +47,30 @@ a {
    text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black,
       -1px 1px 2px black;
 }
+:root {
+   --background: #0a0a0a;
+   --foreground: #ededed;
+   --primary: #035669;
+   --secondary: #2eb9df;
+   --accent: #ff5e94;
+   --muted: #2a2a2a;
+   --card: #111111;
+ }
+ 
+/* Scrollbar styling */
+::-webkit-scrollbar {
+   width: 8px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+   background: var(--muted);
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+   background: var(--primary);
+   border-radius: 4px;
+ }
+ 
+ ::-webkit-scrollbar-thumb:hover {
+   background: var(--secondary);
+ }
